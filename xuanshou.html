@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>袂GAME|战队和选手</title>
+		
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/bootstrap1.min.css">	
+		<script src="js/jquery/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index1.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="js/bootstrap1.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<script src="js/jquery_flexslider.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style1.css" />
+		<link rel="stylesheet" type="text/css" href="css/style2.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset1.css" />
+		<link rel="stylesheet" type="text/css" href="css/style3.css" />
+	<script src="js/mixitup.min.js"></script>
+		<style type="text/css">
+			.fixDiv {
+				position: fixed;
+				width: 100%;
+				top: 0;
+				z-index: 1;
+			}
+		</style>
+	</head>
+	<body style="overflow:-Scroll;overflow-x:hidden">
+
+		<div class="container" style="height:120px">
+			<div class="row" style="height:20px"></div>
+			<div class="row" style="height:50px">
+
+				<div class="container">
+					<div class="col-2  col-md-offset-9 col-sm-offset-9  col-xs-offset-5 ">
+						<input type="button" value="登录|注册" class="btn-block  btn-success btn-light btn-sm">
+					</div>
+
+				</div>
+
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-md-6  col-sm-6  col-xs-3 ">
+
+					<div class="container  " style="font-size:large ;font-weight: bolder;font-style: italic">
+						<a style="text-decoration:none" class="lead">袂GAME</a>
+					</div>
+				</div>
+
+
+
+				<div class="col-md-1 col-sm-1 col-xs-3"></div>
+
+
+
+
+				<div class="col-md-5 col-sm-5  col-xs-6">
+					<div class="col-md-3 col-sm-3  col-xs-3 ">
+						<div class="dropdown" style="left:55%;  position: relative; ">
+							<button type="button" class="btn dropdown-toggle btn-info"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  id="one">
+								全部
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu"  id="two1" >
+								<li role="presentation">
+									<a role="menuitem" tabindex="" href="game.html" target="_blank">游戏</a>
+								</li>
+								<li role="presentation">
+									<a role="menuitem" tabindex="" href="#">赛事</a>
+								</li>
+								<li role="presentation">
+									<a role="menuitem" tabindex="" href="xuanshou.html" target="_blank">选手</a>
+								</li>
+								<li role="presentation" class="divider"></li>
+								<li role="presentation">
+									<a role="menuitem" tabindex="" href="zhibo.html" target="_blank">直播</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<script type="text/javascript" charset="utf-8">
+						$(document).ready(function(){
+							   $('#one').hover(function() {
+								   $("#two1").css('display', 'block');
+							   }, function() {
+								  $("#two1").css('display', 'none');
+							   });
+							
+							   $("#two1").hover(function() {
+								  $(this).css('display', 'block');;
+							   }, function() {
+								  $(this).css('display', 'none');
+							   });
+						})
+						
+						
+					</script>
+
+					<div class="col-md-6 col-sm-6 col-xs-3">
+						<div class="input-group">
+							<input type="text" class="form-control  " id="exampleInputAmount" placeholder="Search">
+							<span class="input-group-btn" style="position:relative; top:-1px    ">
+								<button type="button" class="btn btn-default  glyphicon-search glyphicon"></button>
+							</span></div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	<div style="height: 120px;" class="hx">
+			<nav class="navbar navbar-default  navbar-inverse " style="height: 120px;">
+				<div class="container-fluid  ">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+						 aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">袂GAME</a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html" target="_blank">主页<span class="sr-only">(current)</span></a></li>
+
+							<li class="dropdown">
+								<a href="game.html" target="_blank" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false" id="hh" onclick="a1()">游戏
+									<span class="caret"></span></a>
+								<ul class="dropdown-menu" style="display:none;" id="caidan">
+									<li><a href="https://www.dota2.com.cn/index.htm" target="_blank">DOTA2</a></li>
+									<li><a href="http://sc2.blizzard.cn/home/" target="_blank">星际争霸</a></li>
+									<li><a href="http://dz.blizzard.cn/" target="_blank">魔兽争霸</a></li>
+									<li><a href="https://lol.qq.com/" target="_blank">英雄联盟</a></li>
+									<li role="separator" class="divider" target="_blank"></li>
+									<li><a href="http://pubg.qq.com/main.shtml" target="_blank">绝地求生</a></li>
+									<li role="separator" class="divider"></li>
+									<li><a href="https://pvp.qq.com/" target="_blank">王者荣耀</a></li>
+								</ul>
+							</li>
+							<li><a href="zhibo.html" target="_blank">直播</a><span class="sr-only">(current)</span></li>
+							<li ><a href="xuanshou.html#abc" target="_blank">选手</a><span class="sr-only">(current)</span></li>
+							<li class="active"><a href="xuanshou.html" target="_blank">俱乐部</a><span class="sr-only">(current)</span></li>
+
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+									 id="hh1">赛事
+										<span class="caret"></span></a>
+									<ul class="dropdown-menu" style="display:none;" id="caidan1">
+										<li><a href="https://lpl.qq.com/" target="_blank">LPL</a></li>
+										<li><a href="http://s.163.com/special/wcs2016cn/" target="_blank">WCS</a></li>
+										<li><a href="http://gleague.gamefy.cn/live.php" target="_blank">G联赛</a></li>
+										<li role="separator" class="divider" target="_blank"></li>
+										<li><a href="pvp.qq.com/webplat/info/news_version3/15592/22661/22664/25563/m14593/list_1.shtml
+										"
+											 target="_blank">KPL</a></li>
+									</ul>
+								</li>
+							</ul>
+							<li><a href="wenhua.html" target="_blank">文化</a></li>
+							<li><a href="women.html" target="_blank" class="navbar-right">关于我们</a>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+<script type="text/javascript" charset="utf-8">
+	function a1() {
+		window.open("game.html", "_blank");
+	}
+	
+</script>
+
+				<span class="navbar-right">
+					<span class="top-social-info ">
+						<a href="#" data-toggle="tooltip" data-placement="top" title="QQ" style="position: relative;right: 300%; color: #ccc;"><i
+							 class="fa fa-qq" aria-hidden="true"></i></a>
+						<a href="#" data-toggle="tooltip" data-placement="top" title="微信" style="position: relative;right: 250%;color: #ccc; "><i
+							 class="fa fa-weixin" aria-hidden="true"></i></a>
+						<a href="#" data-toggle="tooltip" data-placement="top" title="微博" style="position: relative;right: 200%;color: #ccc;"><i
+							 class="fa fa-weibo" aria-hidden="true"></i></a>
+						<a href="#" data-toggle="tooltip" data-placement="top" title="Facebook" style="position: relative;right: 150%;color: #ccc;"><i
+							 class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href="#" data-toggle="tooltip" data-placement="top" title="Twitter" style="position: relative;right: 100%;color: #ccc;"><i
+							 class="fa fa-twitter" aria-hidden="true"></i></a>
+					</span>
+
+				</span>
+			</nav>
+		</div>
+
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				$('#hh').hover(function() {
+					$("#caidan").css('display', 'block');
+				}, function() {
+					$("#caidan").css('display', 'none');
+				});
+
+				$("#caidan").hover(function() {
+					$(this).css('display', 'block');;
+				}, function() {
+					$(this).css('display', 'none');
+				});
+			})
+			$(document).ready(function() {
+				$('#hh1').hover(function() {
+					$("#caidan1").css('display', 'block');
+				}, function() {
+					$("#caidan1").css('display', 'none');
+				});
+
+				$("#caidan1").hover(function() {
+					$(this).css('display', 'block');;
+				}, function() {
+					$(this).css('display', 'none');
+				});
+			})
+			$(document).ready(function() {
+				$('#hh2').hover(function() {
+					$("#caidan2").css('display', 'block');
+				}, function() {
+					$("#caidan1").css('display', 'none');
+				});
+			
+				$("#caidan1").hover(function() {
+					$(this).css('display', 'block');;
+				}, function() {
+					$(this).css('display', 'none');
+				});
+			})
+			
+		</script>
+
+		<div class="row" style="background: #2F2F2F;color: white;">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-10 col-sm-10 ">
+				<div class="page-header" style="font-size: 24px;color: white;">
+					<h2> <small>电竞</small>战队</h2>
+				</div>
+			</div>
+			<div class="col-md-1">
+
+			</div>
+		</div>
+
+
+
+
+
+
+		<div class="controls">
+			<button type="button" class=" btn btn-primary btn-lg " style="width: 10%; display: inline-block;" data-filter="all">全部</button>
+			<button type="button" class="btn btn-success btn-lg " style="width: 10%;display: inline-block;" data-filter=".green">LOL</button>
+			<button type="button" class="btn btn-info btn-lg " style="width: 10%;display: inline-block;" data-filter=".blue">王者荣耀</button>
+			<button type="button" class="btn btn-warning btn-lg " style="width: 10%;display: inline-block;" data-filter=".pink">DOTA2</button>
+			<button type="button"  class="btn btn-danger btn-lg " style="width: 10%;display: inline-block;" data-filter=".RED">none</button>
+		</div>
+
+
+		<div class="container1" data-ref="mixitup-container">
+
+			<div class="row">
+				<div class="item green" data-ref="mixitup-target" style="background: unset;border-top: unset;">
+					<div style="text-align:center;clear:both;"></div>
+
+					<div class="gallery-container">
+						<div class="gallery">
+							<div class="frame">
+								<img class="image" src="img/CC-img/gkf34ycnuboqze9c.jpg">
+								<div class="info">V5或Victory5战队</div>
+							</div>
+							<div class="frame">
+								<img class="image" src="img/CC-img/30rwt1vyinjxfgvo.jpg">
+								<div class="info">SDG战队原为IG电子竞技俱乐部旗下YG战队</div>
+							</div>
+							<div class="frame">
+								<img class="image" src="img/CC-img/96y12j55puk6c52w.jpg">
+								<div class="info">中国大陆最高级别的英雄联盟职业比赛</div>
+							</div>
+							<div class="frame">
+								<img class="image" src="img/CC-img/14wzfcv6k6zsra3e.jpg">
+								<div class="info">台湾、香港、澳门战区专属的英雄联盟职业联赛</div>
+							</div>
+							<div class="frame">
+								<img class="image" src="img/CC-img/va0zthhhmgbyppam.png">
+								<div class="info">M17战队</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+			</div>
+
+			<div class="row">
+				<div class="item blue" data-ref="mixitup-target" style="background: unset;border-top: unset;">
+					<div style="text-align:center;clear:both;"></div>
+
+					<div class="gallery-container">
+						<div class="gallery">
+							<div class="frame">
+								<img class="image" src="img/CC-img/bz1nw1hh5vf98lit.jpg">
+								<div class="info">韩国电竞豪门的ROX</div>
+							</div>
+							<div class="frame">
+								<img class="image" src="img/CC-img/r71kcgqogbjngpu6.jpg">
+								<div class="info">M8H</div>
+							</div>
+							<div class="frame">
+								<img class="image" src="img/CC-img/agksfbwolhn0v1ii.png">
+								<div class="info">EP</div>
+							</div>
+							<div class="frame">
+								<img class="image" src="img/CC-img/iv6zw6ma7dzlunvq.jpg">
+								<div class="info">Black-Ananas</div>
+							</div>
+							<div class="frame">
+								<img class="image" src="img/CC-img/5d34vqurbtsos7sb.jpg">
+								<div class="info">QGHappy</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="item pink" data-ref="mixitup-target" style="background: unset;border-top: unset;">
+                      <div style="text-align:center;clear:both;"></div>
+
+					<div class="gallery-container">
+						<div class="gallery">
+							<div class="frame">
+								<img class="image" src="img/CC-img/zljcxoyemk9uzcx7.jpg">
+								<div class="info">Young Elite</div>
+							</div>
+							<div class="frame">
+								<img class="image" src="img/CC-img/ra9nz6osoy27ktno.jpg">
+								<div class="info">VG.P</div>
+							</div>
+							
+							<div class="frame">
+								<img class="image" src="img/CC-img/gronvvckuvdpibx0.jpg">
+								<div class="info">EHOME.X</div>
+							</div>
+							<div class="frame">
+								<img class="image" src="img/CC-img/vt4kdw1vmi9g3rzm.jpg">
+								<div class="info">CIS</div>
+							</div>
+							<div class="frame">
+								<img class="image" src="img/CC-img/summj50bklzu66yl.jpg">
+								<div class="info">TongFu</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			
+
+
+
+			<div class="gap"></div>
+			<div class="gap"></div>
+			<div class="gap"></div>
+		</div>
+
+		
+		<script>
+			var containerEl = document.querySelector('[data-ref~="mixitup-container"]');
+
+			var mixer = mixitup(containerEl, {
+				selectors: {
+					target: '[data-ref~="mixitup-target"]'
+				}
+			});
+		</script>
+
+		<div class="row" style="background: #2F2F2F;color: white;"  name="abc" id="abc">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-10 col-sm-10 ">
+				<div class="page-header" style="font-size: 24px;color: white;">
+					<h2> <small>选手</small>风采</h2>
+				</div>
+			</div>
+			<div class="col-md-1">
+
+			</div>
+		</div>
+
+		<div class="row" style="background: #2F2F2F;color: white;">
+			<div class="col-md-1 col-sm-1 col-xs-1"></div>
+
+			<div class="col-md-10 col-sm-10 col-xs-10">
+				<ul class="nav nav-tabs" role="tablist"  >
+					<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">王者荣耀</a></li>
+					<li role="presentation"><a href="#profile"  aria-controls="profile" role="tab" data-toggle="tab">LOL</a></li>
+					<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">DOTA2</a></li>
+					<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">穿越火线</a></li>
+				</ul>
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="home">
+						<div class="row">
+							<div class="col-xs-6 col-md-3">
+								<a href="#" class="thumbnail">
+									<img src="img/CC-img/p8seacmqreqlhtau.jpg" alt="...">
+								</a>
+								MDS丶左手
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="#" class="thumbnail">
+									<img src="img/CC-img/nt508cihxic07x8s.jpg" alt="...">
+								</a>
+								老帅
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="#" class="thumbnail">
+									<img src="img/CC-img/s327szd53h1fqme2.jpg" alt="...">
+								</a>
+								MDS丶小白
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="#" class="thumbnail">
+									<img src="img/CC-img/egr0ayhdn589kde3.jpg" alt="...">
+								</a>
+								零度
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="profile">
+						<div class="row">
+							<div class="col-xs-6 col-md-3">
+								<a href="#" class="thumbnail">
+									<img src="img/CC-img/q2mtf5quwkbcswoe.jpg" alt="...">
+								</a>
+								Able
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="#" class="thumbnail">
+									<img src="img/CC-img/0n3440ga1wwxopso.jpg" alt="...">
+								</a>
+								XiaoAL
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="#" class="thumbnail">
+									<img src="img/CC-img/0cyr7rpai7dd21ys.jpg" alt="...">
+								</a>
+								Clearlove
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="#" class="thumbnail">
+									<img src="img/CC-img/0bzujzrxi8fg2erl.jpg" alt="...">
+								</a>
+								TheShy
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="messages">
+						<div class="row">
+							<div class="col-xs-6 col-md-3">
+								<a href="#" class="thumbnail">
+									<img src="img/CC-img/3r01sn0gcdw3x6fh.jpg" alt="...">
+								</a>
+								ppd
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="#" class="thumbnail">
+									<img src="img/CC-img/nblv7eqohxm9g6wc.jpg" alt="...">
+								</a>
+								UNiVeRsE
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="#" class="thumbnail">
+									<img src="img/CC-img/m7k24pajhwfgay8s.jpg" alt="...">
+								</a>
+								Inflame
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="#" class="thumbnail">
+									<img src="img/CC-img/udldtn1ulmachxt3.jpg" alt="...">
+								</a>
+								Yao
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="settings">
+						<div class="row">
+							<div class="col-xs-6 col-md-3">
+								<a href="#" class="thumbnail">
+									<img src="img/CC-img/5regtotuuks6ftr5.jpg" alt="...">
+								</a>
+								杜定杰
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="#" class="thumbnail">
+									<img src="img/CC-img/0h151431iiudbc8t.jpg" alt="...">
+								</a>
+								汪浩
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="#" class="thumbnail">
+									<img src="img/CC-img/k7i1wumdwso3abto.jpg" alt="...">
+								</a>
+								白鲨斗鱼Sttt
+							</div>
+							<div class="col-xs-6 col-md-3">
+								<a href="#" class="thumbnail">
+									<img src="img/CC-img/7be5o4wvjsyxwuhc.jpg" alt="...">
+								</a>
+								VG.熊猫TV.N9
+							</div>
+						</div>
+					</div>
+				</div>
+<script src="js/index2.js" type="text/javascript" charset="utf-8"></script>
+				<script type="text/javascript" charset="utf-8">
+					$('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+						e.target // newly activated tab
+						e.relatedTarget // previous active tab
+					})
+					$('#myTabs a').click(function(e) {
+						e.preventDefault()
+						$(this).tab('show')
+					})
+				</script>
+			</div>
+
+			<div class="col-md-1 col-sm-1 col-xs-1"></div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<link rel="stylesheet" type="text/css" href="css/aboutStyle.css"/>
+		
+		<footer id="footer">
+		  
+		    <div class="row">
+				<div class="col-md-1 col-sm-1 col-xs-1">
+					
+				</div>
+		      <div class="col-sm-6">Copyright © 2019 All Rights Reserved.</div>
+		
+		   
+		  </div>
+		</footer>
+
+
+	<a class="glyphicon glyphicon-arrow-up"  id="goToTop"  style="background: #32383E;font-size: 25px;
+	color: #EDEDED;position: fixed;height: 30px; width: 30px ; right:30px;top: 500px; display: block;cursor:pointer;text-decoration:none">
+		
+	</a>	
+	
+		
+		
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#goToTop").hide() //隐藏go to top按钮
+			$(function() {
+				$(window).scroll(function() {
+					if ($(this).scrollTop() > 1) { //当window的scrolltop距离大于1时，go to top按钮淡出，反之淡入
+						$("#goToTop").fadeIn();
+					} else {
+						$("#goToTop").fadeOut();
+					}
+				});
+			});
+	
+	
+			// 给go to top按钮一个点击事件
+			$("#goToTop").click(function() {
+				$("html,body").animate({
+					scrollTop: 0
+				}, 600); //点击go to top按钮时，以800的速度回到顶部，这里的800可以根据你的需求修改
+				return false;
+			});
+		});
+	
+	
+		$(function() {
+			var banOffTop = $(".hx").offset().top; //获取到距离顶部的垂直距离
+			var scTop = 0; //初始化垂直滚动的距离
+			$(document).scroll(function() {
+				scTop = $(this).scrollTop(); //获取到滚动条拉动的距离
+				//console.log(scTop);查看滚动时，垂直方向上，滚动条滚动的距离
+				if (scTop >= banOffTop) {
+					//核心部分：当滚动条拉动的距离大于等于导航栏距离顶部的距离时，添加指定的样式
+					$(".hx").addClass("fixDiv");
+				} else {
+					$(".hx").removeClass("fixDiv");
+				}
+	
+			})
+		})
+	</script>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+	</body>
+</html>

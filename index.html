@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>袂电竞</title>
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<link rel="stylesheet" href="css/bootstrap1.min.css">
+
+		<script src="js/jquery/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap1.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/normalize1.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" href="css/ckin.css">
+
+		<style>
+
+
+			*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+	box-sizing: border-box;
+}
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+
+ 
+#tu{background-color: #000000;margin: 0px;overflow: hidden; height: 500px;}
+a{color:#0078ff;}
+
+
+.container1{
+	margin: 4% auto;
+	width: 210px;
+	height: 140px;
+	position: relative;
+	perspective: 1000;
+	top:-300px;
+}
+#carousel{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+	animation: rotation 20s infinite linear;
+}
+#carousel:hover{
+	animation-play-state: paused;
+}
+#carousel figure{
+	display: block;
+	position: absolute;
+	width: 186px;
+	height: 116px;
+	left: 10px;
+	top: 10px;
+	background: black;
+	overflow: hidden;
+	border: solid 5px black;
+}
+#carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
+#carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(288px);}
+#carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(288px);}
+#carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(288px);}
+#carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(288px);}
+#carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(288px);}
+#carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(288px);}
+#carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(288px);}
+#carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(288px);}
+
+.img{
+	-webkit-filter: grayscale(1);
+	cursor: pointer;
+	transition: all .5s ease;
+}
+img:hover{
+	-webkit-filter: grayscale(0);
+  transform: scale(1.2,1.2);
+}
+
+@keyframes rotation{
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform: rotateY(360deg);
+	}
+}
+
+.page-thunder-to-text {
+	  position: relative;
+	  overflow: hidden;
+	}
+	.page-thunder-to-text canvas {
+	  display: block;
+	}
+	.page-thunder-to-text input {
+	  position: absolute;
+	  bottom: 50px;
+	  left: 0;
+	  right: 0;
+	  display: block;
+	  outline: none;
+	  background-color: rgba(38, 50, 56, 0.2);
+	  color: #ffffff;
+	  border: none;
+	  width: 50%;
+	  min-width: 500px;
+	  max-width: 100%;
+	  margin: auto;
+	  height: 60px;
+	  line-height: 60px;
+	  font-size: 40px;
+	  padding: 0 20px;
+	}
+	.page-thunder-to-text input:hover, .page-thunder-to-text input:focus {
+	  border: 1px solid rgba(38, 50, 56, 0.6);
+	}
+	.page-thunder-to-text input::-webkit-input-placeholder {
+	  color: rgba(255, 255, 255, 0.1);
+	}
+
+ .fixDiv{
+	 position: fixed;
+	 top: 0px;
+	 width: 100%;
+ }
+
+.container2{
+	padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+   margin-top:30px;
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ </style>
+
+	</head>
+	<body style="overflow:-Scroll;overflow-x:hidden">
+
+
+		<div class="container" style="height:120px">
+			<div class="row" style="height:20px"></div>
+			<div class="row" style="height:50px">
+
+				<div class="container">
+					<div class="col-2  col-md-offset-9 col-sm-offset-9  col-xs-offset-5 ">
+						<input type="button" value="登录|注册" class="btn-block  btn-success btn-light btn-sm">
+					</div>
+
+				</div>
+
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-md-6  col-sm-6  col-xs-3 ">
+
+					<div class="container  " style="font-size:large ;font-weight: bolder;font-style: italic">
+						<a style="text-decoration:none" class="lead">袂GAME</a>
+					</div>
+				</div>
+
+
+
+				<div class="col-md-1 col-sm-1 col-xs-1"></div>
+
+
+
+
+				<div class="col-md-5 col-sm-5  col-xs-9">
+					<div class="container">
+						<div class="col-md-2 col-sm-2  col-xs-3 ">
+							<div class="dropdown" style="left:55%;  position: relative; ">
+								<button type="button" class="btn dropdown-toggle btn-info" data-toggle="dropdown" id="one" aria-haspopup="true"
+								 aria-expanded="false">
+									全部
+									<span class="glyphicon glyphicon-chevron-down"></span>
+								</button>
+								<ul class="dropdown-menu" id="two1">
+									<li role="presentation">
+										<a role="menuitem" tabindex="" href="game.html" target="_blank">游戏</a>
+									</li>
+									<li role="presentation">
+										<a role="menuitem" tabindex="">赛事</a>
+									</li>
+									<li role="presentation">
+										<a role="menuitem" tabindex="" href="xuanshou.html" target="_blank">选手</a>
+									</li>
+									<li role="presentation" class="divider"></li>
+									<li role="presentation">
+										<a role="menuitem" tabindex="" href="zhibo.html" target="_blank">直播</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<script type="text/javascript" charset="utf-8">
+							$(document).ready(function() {
+								$('#one').hover(function() {
+									$("#two1").css('display', 'block');
+								}, function() {
+									$("#two1").css('display', 'none');
+								});
+
+								$("#two1").hover(function() {
+									$(this).css('display', 'block');;
+								}, function() {
+									$(this).css('display', 'none');
+								});
+							})
+						</script>
+						<div class="col-md-3 col-sm-3 col-xs-6">
+							<div class="input-group">
+								<input type="text" class="form-control  " id="exampleInputAmount" placeholder="Search">
+								<span class="input-group-btn" style="position:relative; top:-1px    ">
+									<button type="button" class="btn btn-default  glyphicon-search glyphicon"></button>
+								</span></div>
+						</div>
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+		<div style="height: 120px;" class="hx">
+			<nav class="navbar navbar-default  navbar-inverse " style="height: 120px;">
+				<div class="container-fluid  ">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+						 aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">袂GAME</a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="index.html" target="_blank">主页<span class="sr-only">(current)</span></a></li>
+
+							<li class="dropdown">
+								<a href="game.html" target="_blank" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false" id="hh" onclick="a1()">游戏
+									<span class="caret"></span></a>
+								<ul class="dropdown-menu" style="display:none;" id="caidan">
+									<li><a href="https://www.dota2.com.cn/index.htm" target="_blank">DOTA2</a></li>
+									<li><a href="http://sc2.blizzard.cn/home/" target="_blank">星际争霸</a></li>
+									<li><a href="http://dz.blizzard.cn/" target="_blank">魔兽争霸</a></li>
+									<li><a href="https://lol.qq.com/" target="_blank">英雄联盟</a></li>
+									<li role="separator" class="divider" target="_blank"></li>
+									<li><a href="http://pubg.qq.com/main.shtml" target="_blank">绝地求生</a></li>
+									<li role="separator" class="divider"></li>
+									<li><a href="https://pvp.qq.com/" target="_blank">王者荣耀</a></li>
+								</ul>
+							</li>
+							<li><a href="zhibo.html" target="_blank">直播</a><span class="sr-only">(current)</span></li>
+							<li><a href="xuanshou.html#abc" target="_blank">选手</a><span class="sr-only">(current)</span></li>
+							<li><a href="xuanshou.html" target="_blank">俱乐部</a><span class="sr-only">(current)</span></li>
+
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+									 id="hh1">赛事
+										<span class="caret"></span></a>
+									<ul class="dropdown-menu" style="display:none;" id="caidan1">
+										<li><a href="https://lpl.qq.com/" target="_blank">LPL</a></li>
+										<li><a href="http://s.163.com/special/wcs2016cn/" target="_blank">WCS</a></li>
+										<li><a href="http://gleague.gamefy.cn/live.php" target="_blank">G联赛</a></li>
+										<li role="separator" class="divider" target="_blank"></li>
+										<li><a href="pvp.qq.com/webplat/info/news_version3/15592/22661/22664/25563/m14593/list_1.shtml
+										"
+											 target="_blank">KPL</a></li>
+									</ul>
+								</li>
+							</ul>
+							<li><a href="wenhua.html" target="_blank">文化</a></li>
+							<li><a href="women.html" target="_blank" class="navbar-right">关于我们</a>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+					<script type="text/javascript" charset="utf-8">
+						function a1() {
+							window.open("game.html", "_blank");
+						}
+					</script>
+				</div><!-- /.container-fluid -->
+
+				<span class="navbar-right">
+					<span class="top-social-info ">
+						<a href="#" data-toggle="tooltip" data-placement="top" title="QQ" style="position: relative;right: 300%; color: #ccc;"><i
+							 class="fa fa-qq" aria-hidden="true"></i></a>
+						<a href="#" data-toggle="tooltip" data-placement="top" title="微信" style="position: relative;right: 250%;color: #ccc; "><i
+							 class="fa fa-weixin" aria-hidden="true"></i></a>
+						<a href="#" data-toggle="tooltip" data-placement="top" title="微博" style="position: relative;right: 200%;color: #ccc;"><i
+							 class="fa fa-weibo" aria-hidden="true"></i></a>
+						<a href="#" data-toggle="tooltip" data-placement="top" title="Facebook" style="position: relative;right: 150%;color: #ccc;"><i
+							 class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href="#" data-toggle="tooltip" data-placement="top" title="Twitter" style="position: relative;right: 100%;color: #ccc;"><i
+							 class="fa fa-twitter" aria-hidden="true"></i></a>
+					</span>
+
+				</span>
+			</nav>
+		</div>
+
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				$('#hh').hover(function() {
+					$("#caidan").css('display', 'block');
+				}, function() {
+					$("#caidan").css('display', 'none');
+				});
+
+				$("#caidan").hover(function() {
+					$(this).css('display', 'block');;
+				}, function() {
+					$(this).css('display', 'none');
+				});
+			})
+			$(document).ready(function() {
+				$('#hh1').hover(function() {
+					$("#caidan1").css('display', 'block');
+				}, function() {
+					$("#caidan1").css('display', 'none');
+				});
+
+				$("#caidan1").hover(function() {
+					$(this).css('display', 'block');;
+				}, function() {
+					$(this).css('display', 'none');
+				});
+			})
+		</script>
+
+
+
+		<div class="jumbotron" style="background: #1B1E21; width: 100%; margin-bottom: 0px;">
+
+			<h1 class="row">
+				<div class="container" style="margin: auto; ">
+					<a style="text-decoration:none;color: white;">袂GAME只为打造专业的电竞门户</a>
+				</div>
+			</h1>
+
+			<h2>在这里，你可以了解到最新的电竞资讯</h2>
+			<h2>在这里，你可以学习到最全的游戏攻略</h2>
+			<h2>在这里，你可以体会到最深的电竞精神</h2>
+
+		</div>
+
+
+
+		<div class="slider" id="slider" style="--img-prev:url(img/bg-img/1.jpeg)">
+			<div class="slider__content" id="slider-content">
+				<div class="slider__images">
+					<div class="slider__images-item slider__images-item--active" data-id="1"><img src="img/bg-img/王者.jpg"></div>
+					<div class="slider__images-item" data-id="2"><img src="img/bg-img/ciji.jpeg"></div>
+					<div class="slider__images-item" data-id="3"><img src="img/bg-img/魔兽.jpg"></div>
+					<div class="slider__images-item" data-id="4"><img src="img/bg-img/LOL.jpg"></div>
+					<div class="slider__images-item" data-id="5"><img src="img/bg-img/Dota2.jpeg"></div>
+					<div class="slider__images-item" data-id="6"><img src="img/bg-img/星际.jpg"></div>
+					<div class="slider__images-item" data-id="7"><img src="img/bg-img/cf.jpg"></div>
+
+
+				</div>
+				<div class="slider__text">
+					<div class="slider__text-item slider__text-item--active" data-id="1">
+						<div class="slider__text-item-head">
+							<h3>王者荣耀</h3>
+						</div>
+						<div class="slider__text-item-info">
+							<p>全球首款5V5公平对战手游</p>
+						</div>
+					</div>
+					<div class="slider__text-item" data-id="2">
+						<div class="slider__text-item-head">
+							<h3>绝地求生</h3>
+						</div>
+						<div class="slider__text-item-info">
+							<p>大吉大利，晚上吃鸡！</p>
+						</div>
+					</div>
+					<div class="slider__text-item" data-id="3">
+						<div class="slider__text-item-head">
+							<h3>魔兽争霸</h3>
+						</div>
+						<div class="slider__text-item-info">
+							<p>兽人永不为奴，让我们领略兽人七雄的风采</p>
+						</div>
+					</div>
+					<div class="slider__text-item" data-id="4">
+						<div class="slider__text-item-head">
+							<h3>英雄联盟</h3>
+						</div>
+						<div class="slider__text-item-info">
+							<p>团队，战友，热血！你还在等什么？来！战个痛快！英雄联盟！有你更精彩！</p>
+						</div>
+					</div>
+					<div class="slider__text-item" data-id="5">
+						<div class="slider__text-item-head">
+							<h3>Dota2</h3>
+						</div>
+						<div class="slider__text-item-info">
+							<p>延续DotA精神,全英雄免费、精彩电竞尽在其中</p>
+						</div>
+					</div>
+					<div class="slider__text-item" data-id="6">
+						<div class="slider__text-item-head">
+							<h3>星际争霸</h3>
+						</div>
+						<div class="slider__text-item-info">
+							<p>我的同胞们，听我说，时间不多了，摆在你们面前的是这个种族和文明在战火中存留下来的一切！</p>
+						</div>
+					</div>
+					<div class="slider__text-item" data-id="7">
+						<div class="slider__text-item-head">
+							<h3>穿越火线</h3>
+						</div>
+						<div class="slider__text-item-info">
+							<p>没有一辈子的游戏,只有一辈子的朋友,穿越火线期待你的加入</p>
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+				</div>
+			</div>
+			<div class="slider__nav">
+				<div class="slider__nav-arrows">
+					<div class="slider__nav-arrow slider__nav-arrow--left" id="left">to left</div>
+					<div class="slider__nav-arrow slider__nav-arrow--right" id="right">to right</div>
+				</div>
+				<div class="slider__nav-dots" id="slider-dots">
+					<div class="slider__nav-dot slider__nav-dot--active" data-id="1"></div>
+					<div class="slider__nav-dot" data-id="2"></div>
+					<div class="slider__nav-dot" data-id="3"></div>
+					<div class="slider__nav-dot" data-id="4"></div>
+					<div class="slider__nav-dot" data-id="5"></div>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="tu">
+			<div style="text-align:center;clear:both">
+
+
+			</div>
+
+			<script src="js/index.js"></script>
+
+			<div style="text-align:center;clear:both">
+
+
+			</div>
+			<iframe frameborder="0" scrolling="no" src="index2.html" width="100%" height="500px"></iframe>
+
+
+			<div class="container1">
+				<div id="carousel">
+					<figure><a href="http://pubg.qq.com/main.shtml" target="_blank"><img src="img/bg-img/you1.jpg" alt="" class="img"
+							 style="width: 180px"></a></figure>
+					<figure><a href="https://dnf.qq.com/" target="_blank"><img src="img/bg-img/you3.jpg" alt="" class="img" style="width: 180px"></a></figure>
+					<figure><a href="https://www.dota2.com.cn/index.html/" target="_blank"><img src="img/bg-img/you2.jpg" alt="" class="img"
+							 style="width: 200px"></a></figure>
+					<figure><a href="https://pvp.qq.com/" target="_blank"><img src="img/bg-img/you4.jpg" alt="" class="img" style="width: 180px"></a></figure>
+					<figure><a href="https://lol.qq.com/" target="_blank"><img src="img/bg-img/you5.jpg" alt="" class="img" style="width: 160px"></a></figure>
+					<figure><a href="http://dz.blizzard.cn/" target="_blank"><img src="img/bg-img/you6.jpg" alt="" class="img" style="width: 160px"></a></figure>
+					<figure><a href="https://sc2.blizzard.cn/landing" target="_blank"><img src="img/bg-img/you7.jpg" alt="" class="img"
+							 style="width: 180px"></a></figure>
+					<figure><a href="http://hs.blizzard.cn/landing" target="_blank"><img src="img/bg-img/you8.jpg" alt="" class="img"
+							 style="width: 180px"></a></figure>
+					<figure><a href="https://ow.blizzard.cn/home" target="_blank"><img src="img/bg-img/you9.png" alt="" class="img"
+							 style="width: 180px"></a></figure>
+
+
+				</div>
+			</div>
+
+		</div>
+
+
+
+		<script src="js/index.js"></script>
+		<div style="text-align:center;clear:both">
+
+		</div>
+
+		</div>
+
+
+
+		<div class="row">
+			<div class=" col-md-1 col-sm-1"> </div>
+			<div class="col-xs-10 col-sm-5 col-md-4 ">
+				<div class="list-group" style="overflow:scroll; height: 400px; overflow-x:hidden; margin-top:30px  ">
+					<button id="yj" type="button" class="list-group-item" style="height: 150px;background-color: #EBBFC0">
+						<div class="row">
+							<div class="col-md-4  col-xs-4 col-sm-4 ">
+								<img alt="绝地求生" src="img/bg-img/you11.jpg" style="height: 125px;width:100% ; float: left" class="img-thumbnail">
+							</div>
+
+
+							<div class="col-md-8 col-xs-8 col-sm-8" style="overflow:hidden; height:200px;">
+								绝地求生》（PUBG），是一款战术竞技游戏，策略与枪法一样重要，充满各种随机性要素，需要你随时做出判断，取得胜利。大吉大利，全民吃鸡。ps:国服未出，只能在Steam中购买，进行游戏。
+							</div>
+						</div>
+
+					</button>
+
+
+
+
+
+					<button id="yd" type="button" class="list-group-item" style="height: 150px;background-color: #EBBFC0 ">
+						<div class="row">
+							<div class="col-md-4 col-xs-4 col-sm-4">
+								<img alt="DOTA2" class="img-thumbnail" src="img/bg-img/you12.jpg" style="height: 125px; width: 100%; float: left">
+							</div>
+							<div class="col-md-8 " style="overflow:hidden; height: 200px;">
+								《DotA2》，延续DotA精神，全英雄免费、精彩电竞尽在其中。Steam热门作品之一，Valve心血力作，精彩电竞豪享。CN DOTA再战偶数年，Ti赛事已蓄势待发。
+							</div>
+						</div>
+
+					</button>
+
+
+
+
+
+
+
+					<button id="yy" type="button" class="list-group-item" style="height: 150px;background-color: #EBBFC0 ">
+
+
+						<div class="row">
+							<div class="col-md-3 col-xs-3 col-sm-3">
+								<img alt="绝地求生" class="img-thumbnail" src="img/bg-img/you13.jpeg" style="height: 125px; float: left width: 100%;">
+							</div>
+							<div class="col-md-9 col-xs-9 col-sm-9 " style="overflow:hidden; height: 200px;">
+								《英雄联盟》(简称LOL)是英雄对战MOBA竞技网游。游戏里拥有数百个个性英雄，并拥有排位系统、符文系统等特色养成系统。《英雄联盟》还致力于推动全球电子竞技的发展，除了联动各赛区发展职业联赛、打造电竞体系之外，每年还会举办“季中冠军赛”“全球总决赛”“All
+								Star全明星赛”三大世界级赛事，获得了亿万玩家的喜爱，形成了自己独有的电子竞技文化。
+							</div>
+						</div>
+					</button>
+
+
+
+
+
+
+
+
+
+					<button id="yc" type="button" class="list-group-item" style="height: 150px;background-color: #EBBFC0 ">
+						<div class="row">
+							<div class="col-md-3 col-xs-3 col-sm-3">
+								<img alt="绝地求生" class="img-thumbnail" src="img/bg-img/you18.jpg" style="height: 125px; float: left; width:100%">
+							</div>
+
+
+							<div class="col-md-9 col-xs-9 col-sm-9 " style="overflow:hidden; height: 200px;">
+								《穿越火线》.300万人同时在线,三亿鼠标的枪战梦想.《穿越火线》追求的不仅仅是开枪的爽快感,而是来自相互合作及默契带来的战略意义.最新活动尽在CF官方网站.
+							</div>
+						</div>
+					</button>
+
+
+
+
+					<button id="ym" type="button" class="list-group-item" style="height:150px;background-color: #EBBFC0 ">
+						<div class="row">
+							<div class="col-md-3 col-xs-3 col-sm-3">
+								<img alt="绝地求生" class="img-thumbnail" src="img/bg-img/you14.jpg" style="height: 115px; float: left ; width:100%">
+							</div>
+							<div class="col-md-9 col-xs-9 col-sm-9" style="overflow:hidden; height: 200px;">
+								《魔兽争霸》与暴雪公司早些时候发行的游戏《星际争霸》一样，是一款成功的即时战略游戏。游戏包含了大多数即时战略游戏所具备的要素：采集资源，建设基地和指挥战斗。游戏的操作方式也与星际争霸类似，秉承了星际争霸易于上手的优点，并对星际争霸中一些繁琐的操作进行了简化
+							</div>
+						</div>
+					</button>
+
+
+					<button id="gd" type="button" class="list-group-item" style="height: 150px;background-color: #EBBFC0 ">
+						<div class="row">
+							<div class="col-md-3 col-xs-3 col-sm-3">
+								<img alt="绝地求生" class="img-thumbnail" src="img/bg-img/you15.png" style="height: 125px; float: left;width:100%">
+							</div>
+							<div class="col-md-9 col-xs-9 col-sm-9" style="overflow:hidden; height: 200px;">
+								《地下城与勇士》是全球2D横版格斗网络游戏（MMOACT）的先行者。无限连击的动作特性、极富多样化的职业分支、精准的操作与多样化副本体验，让玩家全方位体验打击爽快感。
+							</div>
+						</div>
+					</button>
+
+
+
+					<button id="yw" type="button" class="list-group-item" style="height: 150px;background-color: #EBBFC0 ">
+						<div class="row">
+							<div class="col-md-3 col-xs-3 col-sm-3">
+								<img alt="王者荣耀" class="img-thumbnail" src="img/bg-img/you16.jpg" style="height: 125px; float: left;width:100%">
+							</div>
+							<div class="col-md-9 col-xs-9 col-sm-9" style="overflow:hidden; height: 200px;">
+								《王者荣耀》是腾讯天美工作室推出的英雄竞技手游，不是一个人的王者，而是团队的荣耀！5v5王者峡谷PVP对战，领略英雄竞技的酣畅淋漓！更有边境突围、五军对决等丰富的游戏模式，体验突破传统、英雄竞技新形态！
+							</div>
+						</div>
+					</button>
+
+
+
+				</div>
+			</div>
+
+			<div class="col-xs-10  col-sm-6  col-md-6">
+
+
+
+
+
+
+				<section class="demo-section demo-section--light" id="demo">
+					<div class="container2">
+
+
+						<video id="hk" poster="img/bg-img/ciji.jpeg" height="320px" data-ckin="default" data-overlay="1" data-title="袂GAME,为电竞而生"
+						 src="lol.mp4"></video>
+
+
+					</div>
+				</section>
+				<script src="js/ckin.js"></script>
+
+
+				<script type="text/javascript" charset="utf-8">
+					$(function() {
+						$('#yj').click(
+							function() {
+								$('#hk').attr('poster', 'img/bg-img/吃鸡2.jpg');
+								$('#hk').attr('src', 'video/1.mp4');
+
+							}
+						);
+						$('#yd').click(
+							function() {
+								$('#hk').attr('poster', 'img/bg-img/DOTA2.jpg');
+								$('#hk').attr('src', 'video/2.mp4');
+
+							}
+						);
+						$('#yy').click(
+							function() {
+								$('#hk').attr('poster', 'img/bg-img/LOL.jpg');
+								$('#hk').attr('src', 'video/3.mp4');
+
+							}
+						);
+						$('#yc').click(
+							function() {
+								$('#hk').attr('poster', 'img/bg-img/cf1.jpg');
+								$('#hk').attr('src', 'video/7.mp4');
+
+							}
+						);
+						$('#ym').click(
+							function() {
+								$('#hk').attr('poster', 'img/bg-img/魔兽.jpg');
+								$('#hk').attr('src', 'video/6.mp4');
+
+							}
+						);
+						$('#gd').click(
+							function() {
+								$('#hk').attr('poster', 'img/bg-img/地下城与勇士.jpg');
+								$('#hk').attr('src', 'video/5.mp4');
+
+							}
+						);
+						$('#yw').click(
+							function() {
+								$('#hk').attr('poster', 'img/bg-img/王者.jpg');
+								$('#hk').attr('src', 'video/4.mp4');
+							}
+						);
+
+					});
+				</script>
+
+
+
+
+
+
+
+			</div>
+
+			<div class="col-md-1 col-sm-1">
+
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="page page-thunder-to-text">
+			<input id="input" type="text" maxlength="24" placeholder="" style="display: none;">
+			<canvas id="canvas" style="width: 100%;"></canvas>
+		</div>
+
+
+
+
+
+		<script>
+			let canvas, ctx, w, h, thunder, text, particles, input;
+
+			function Thunder(options) {
+				options = options || {};
+				this.lifespan = options.lifespan || Math.round(Math.random() * 10 + 10);
+				this.maxlife = this.lifespan;
+				this.color = options.color || '#fefefe';
+				this.glow = options.glow || '#2323fe';
+				this.x = options.x || Math.random() * w;
+				this.y = options.y || Math.random() * h;
+				this.width = options.width || 2;
+				this.direct = options.direct || Math.random() * Math.PI * 2;
+				this.max = options.max || Math.round(Math.random() * 10 + 20);
+				this.segments = [...new Array(this.max)].map(() => {
+					return {
+						direct: this.direct + (Math.PI * Math.random() * 0.2 - 0.1),
+						length: Math.random() * 20 + 80,
+						change: Math.random() * 0.04 - 0.02
+					};
+				});
+
+				this.update = function(index, array) {
+					this.segments.forEach(s => {
+						(s.direct += s.change) && Math.random() > 0.96 && (s.change *= -1)
+					});
+					(this.lifespan > 0 && this.lifespan--) || this.remove(index, array);
+				}
+
+				this.render = function(ctx) {
+					if (this.lifespan <= 0) return;
+					ctx.beginPath();
+					ctx.globalAlpha = this.lifespan / this.maxlife;
+					ctx.strokeStyle = this.color;
+					ctx.lineWidth = this.width;
+					ctx.shadowBlur = 32;
+					ctx.shadowColor = this.glow;
+					ctx.moveTo(this.x, this.y);
+					let prev = {
+						x: this.x,
+						y: this.y
+					};
+					this.segments.forEach(s => {
+						const x = prev.x + Math.cos(s.direct) * s.length;
+						const y = prev.y + Math.sin(s.direct) * s.length;
+						prev = {
+							x: x,
+							y: y
+						};
+						ctx.lineTo(x, y);
+					});
+					ctx.stroke();
+					ctx.closePath();
+					ctx.shadowBlur = 0;
+					const strength = Math.random() * 80 + 40;
+					const light = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, strength);
+					light.addColorStop(0, 'rgba(250, 200, 50, 0.6)');
+					light.addColorStop(0.1, 'rgba(250, 200, 50, 0.2)');
+					light.addColorStop(0.4, 'rgba(250, 200, 50, 0.06)');
+					light.addColorStop(0.65, 'rgba(250, 200, 50, 0.01)');
+					light.addColorStop(0.8, 'rgba(250, 200, 50, 0)');
+					ctx.beginPath();
+					ctx.fillStyle = light;
+					ctx.arc(this.x, this.y, strength, 0, Math.PI * 2);
+					ctx.fill();
+					ctx.closePath();
+				}
+
+				this.remove = function(index, array) {
+					array.splice(index, 1);
+				}
+			}
+
+			function Spark(options) {
+				options = options || {};
+				this.x = options.x || w * 0.5;
+				this.y = options.y || h * 0.5;
+				this.v = options.v || {
+					direct: Math.random() * Math.PI * 2,
+					weight: Math.random() * 14 + 2,
+					friction: 0.88
+				};
+				this.a = options.a || {
+					change: Math.random() * 0.4 - 0.2,
+					min: this.v.direct - Math.PI * 0.4,
+					max: this.v.direct + Math.PI * 0.4
+				};
+				this.g = options.g || {
+					direct: Math.PI * 0.5 + (Math.random() * 0.4 - 0.2),
+					weight: Math.random() * 0.25 + 0.25
+				};
+				this.width = options.width || Math.random() * 3;
+				this.lifespan = options.lifespan || Math.round(Math.random() * 20 + 40);
+				this.maxlife = this.lifespan;
+				this.color = options.color || '#feca32';
+				this.prev = {
+					x: this.x,
+					y: this.y
+				};
+
+				this.update = function(index, array) {
+					this.prev = {
+						x: this.x,
+						y: this.y
+					};
+					this.x += Math.cos(this.v.direct) * this.v.weight;
+					this.x += Math.cos(this.g.direct) * this.g.weight;
+					this.y += Math.sin(this.v.direct) * this.v.weight;
+					this.y += Math.sin(this.g.direct) * this.g.weight;
+					this.v.weight > 0.2 && (this.v.weight *= this.v.friction);
+					this.v.direct += this.a.change;
+					(this.v.direct > this.a.max || this.v.direct < this.a.min) && (this.a.change *= -1);
+					this.lifespan > 0 && this.lifespan--;
+					this.lifespan <= 0 && this.remove(index, array);
+				}
+
+				this.render = function(ctx) {
+					if (this.lifespan <= 0) return;
+					ctx.beginPath();
+					ctx.globalAlpha = this.lifespan / this.maxlife;
+					ctx.strokeStyle = this.color;
+					ctx.lineWidth = this.width;
+					ctx.moveTo(this.x, this.y);
+					ctx.lineTo(this.prev.x, this.prev.y);
+					ctx.stroke();
+					ctx.closePath();
+				}
+
+				this.remove = function(index, array) {
+					array.splice(index, 1);
+				}
+			}
+
+			function Particles(options) {
+				options = options || {};
+				this.max = options.max || Math.round(Math.random() * 10 + 10);
+				this.sparks = [...new Array(this.max)].map(() => new Spark(options));
+
+				this.update = function() {
+					this.sparks.forEach((s, i) => s.update(i, this.sparks));
+				}
+
+				this.render = function(ctx) {
+					this.sparks.forEach(s => s.render(ctx));
+				}
+			}
+
+			function Text(options) {
+				options = options || {};
+				const pool = document.createElement('canvas');
+				const buffer = pool.getContext('2d');
+				pool.width = w;
+				buffer.fillStyle = '#000000';
+				buffer.fillRect(0, 0, pool.width, pool.height);
+
+				this.size = options.size || 100;
+				this.copy = (options.copy || `Hello!`) + ' ';
+				this.color = options.color || '#cd96fe';
+				this.delay = options.delay || 5;
+				this.basedelay = this.delay;
+				buffer.font = `${this.size}px Comic Sans MS`;
+				this.bound = buffer.measureText(this.copy);
+				this.bound.height = this.size * 1.5;
+				this.x = options.x || w * 0.5 - this.bound.width * 0.5;
+				this.y = options.y || h * 0.5 - this.size * 0.5;
+
+				buffer.strokeStyle = this.color;
+				buffer.strokeText(this.copy, 0, this.bound.height * 0.8);
+				this.data = buffer.getImageData(0, 0, this.bound.width, this.bound.height);
+				this.index = 0;
+
+				this.update = function() {
+					if (this.index >= this.bound.width) {
+						this.index = 0;
+						return;
+					}
+					const data = this.data.data;
+					for (let i = this.index * 4; i < data.length; i += (4 * this.data.width)) {
+						const bitmap = data[i] + data[i + 1] + data[i + 2] + data[i + 3];
+						if (bitmap > 255 && Math.random() > 0.96) {
+							const x = this.x + this.index;
+							const y = this.y + (i / this.bound.width / 4);
+							thunder.push(new Thunder({
+								x: x,
+								y: y
+							}));
+							Math.random() > 0.5 && particles.push(new Particles({
+								x: x,
+								y: y
+							}));
+						}
+					}
+					if (this.delay-- < 0) {
+						this.index++;
+						this.delay += this.basedelay;
+					}
+				}
+
+				this.render = function(ctx) {
+					ctx.putImageData(this.data, this.x, this.y, 0, 0, this.index, this.bound.height);
+				}
+			}
+
+			function loop() {
+				update();
+				render();
+				requestAnimationFrame(loop);
+			}
+
+			function update() {
+				text.update();
+				thunder.forEach((l, i) => l.update(i, thunder));
+				particles.forEach(p => p.update());
+			}
+
+			function render() {
+				ctx.globalCompositeOperation = 'source-over';
+				ctx.globalAlpha = 1;
+				ctx.fillStyle = '#000000';
+				ctx.fillRect(0, 0, w, h);
+				//
+				ctx.globalCompositeOperation = 'screen';
+				text.render(ctx);
+				thunder.forEach(l => l.render(ctx));
+				particles.forEach(p => p.render(ctx));
+			}
+
+			(function() {
+				//
+				canvas = document.getElementById('canvas');
+				input = document.getElementById('input');
+				ctx = canvas.getContext('2d');
+				w = window.innerWidth;
+				h = window.innerHeight;
+				canvas.width = w;
+				canvas.height = h;
+				thunder = [];
+				particles = [];
+				//
+				text = new Text({
+					copy: '袂GAME！'
+				});
+				canvas.addEventListener('click', (e) => {
+					const x = e.clientX;
+					const y = e.clientY;
+					thunder.push(new Thunder({
+						x: x,
+						y: y
+					}));
+					particles.push(new Particles({
+						x: x,
+						y: y
+					}));
+				});
+				let cb = 0;
+				input.addEventListener('keyup', (e) => {
+					clearTimeout(cb);
+					cb = setTimeout(() => {
+						text = new Text({
+							copy: input.value
+						});
+					}, 300);
+				});
+				//
+				loop();
+			})()
+		</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+</html>

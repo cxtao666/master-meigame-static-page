@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<!--suppress CssInvalidPropertyValue -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+		<title>袂GAME|文化</title>
+
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<link rel="stylesheet" href="css/bootstrap1.min.css">
+		<script src="js/jquery/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap1.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<script src="js/jquery_flexslider.js"></script>
+
+		<script src="js/highcharts.js"></script>
+		<script src="js/highcharts-3d.js"></script>
+		<script src="js/exporting.js"></script>
+		<script src="js/highcharts-zh_CN.js"></script>
+		<script src="js/oldie.js"></script>
+		<script src="js/cylinder.js"></script>
+		<script src="js/dark-unica.js"></script>
+
+
+		<style type="text/css">
+			#box {
+				border: 1px solid #dadada;
+				padding: 0px;
+				width: 500px;
+				margin: 30px auto;
+				height: 270px;
+				overflow: hidden;
+				/*  这个一定要加，超出的内容部分要隐藏，免得撑高中间部分 */
+			}
+
+			.list-group {
+				margin: 0px;
+				width: 100%;
+			}
+
+			#cont1,
+			#cont2 {
+				margin: 0px;
+				padding: 0px;
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+			.fixDiv {
+				position: fixed;
+				width: 100%;
+				top: 0;
+				z-index: 1;
+			}
+
+
+			body {
+				background: #f5f3e7;
+			}
+
+			.wrapper {
+				padding: 50px 100px;
+			}
+
+			.svg-container {
+				display: inline-block;
+				position: relative;
+				width: 100%;
+				padding-bottom: 100%;
+				vertical-align: middle;
+				overflow: hidden;
+				background: #f5f3e7;
+			}
+
+			.svg-content {
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+
+			// line {
+			//   //position: relative;
+			//   z-index: -1;
+			// }
+
+			// rect {
+			//   //position: relative;
+			//   z-index: 1;
+			// }
+		</style>
+
+
+
+
+
+	</head>
+
+
+
+	<body style="overflow:-Scroll;overflow-x:hidden">
+	
+	
+			<div class="container" style="height:120px">
+				<div class="row" style="height:20px"></div>
+				<div class="row" style="height:50px">
+	
+					<div class="container">
+						<div class="col-2  col-md-offset-9 col-sm-offset-9  col-xs-offset-5 ">
+							<input type="button" value="登录|注册" class="btn-block  btn-success btn-light btn-sm">
+						</div>
+	
+					</div>
+	
+	
+				</div>
+	
+				<div class="row">
+	
+					<div class="col-md-5  col-sm-5  col-xs-4 ">
+	
+						<div class="container  " style="font-size:large ;font-weight: bolder;font-style: italic">
+							<a style="text-decoration:none" class="lead">袂GAME</a>
+						</div>
+					</div>
+	
+	
+	
+					<div class="col-md-2 col-sm-2 col-xs-2"></div>
+	
+	
+	
+	
+					<div class="col-md-5 col-sm-5  col-xs-6">
+						<div class="col-md-3 col-sm-3   col-xs-3">
+							<div class="dropdown" style="left:55%;  position: relative; ">
+								<button type="button" class="btn dropdown-toggle btn-info"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  id="one">
+									全部
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu"  id="two1" >
+									<li role="presentation">
+										<a role="menuitem" tabindex="" href="game.html" target="_blank">游戏</a>
+									</li>
+									<li role="presentation">
+										<a role="menuitem" tabindex="" href="#">赛事</a>
+									</li>
+									<li role="presentation">
+										<a role="menuitem" tabindex="" href="xuanshou.html" target="_blank">选手</a>
+									</li>
+									<li role="presentation" class="divider"></li>
+									<li role="presentation">
+										<a role="menuitem" tabindex="" href="zhibo.html" target="_blank">直播</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<script type="text/javascript" charset="utf-8">
+							$(document).ready(function(){
+								   $('#one').hover(function() {
+									   $("#two1").css('display', 'block');
+								   }, function() {
+									  $("#two1").css('display', 'none');
+								   });
+								
+								   $("#two1").hover(function() {
+									  $(this).css('display', 'block');;
+								   }, function() {
+									  $(this).css('display', 'none');
+								   });
+							})
+							
+							
+						</script>
+
+						<div class="col-md-6 col-sm-6 col-xs-3">
+							<div class="input-group">
+								<input type="text" class="form-control  " id="exampleInputAmount" placeholder="Search">
+								<span class="input-group-btn" style="position:relative; top:-1px    ">
+									<button type="button" class="btn btn-default  glyphicon-search glyphicon"></button>
+								</span></div>
+						</div>
+	
+					</div>
+				</div>
+			</div>
+	
+	
+			<div style="height: 120px;" class="hx">
+						<nav class="navbar navbar-default  navbar-inverse " style="height: 120px;">
+							<div class="container-fluid  ">
+								<!-- Brand and toggle get grouped for better mobile display -->
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+									 aria-expanded="false">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+									<a class="navbar-brand" href="#">袂GAME</a>
+								</div>
+			
+								<!-- Collect the nav links, forms, and other content for toggling -->
+								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+									<ul class="nav navbar-nav">
+										<li><a href="index.html" target="_blank">主页<span class="sr-only">(current)</span></a></li>
+			
+										<li class="dropdown">
+											<a href="game.html" target="_blank" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true"
+											 aria-expanded="false" id="hh" onclick="a1()">游戏
+												<span class="caret"></span></a>
+											<ul class="dropdown-menu" style="display:none;" id="caidan">
+												<li><a href="https://www.dota2.com.cn/index.htm" target="_blank">DOTA2</a></li>
+												<li><a href="http://sc2.blizzard.cn/home/" target="_blank">星际争霸</a></li>
+												<li><a href="http://dz.blizzard.cn/" target="_blank">魔兽争霸</a></li>
+												<li><a href="https://lol.qq.com/" target="_blank">英雄联盟</a></li>
+												<li role="separator" class="divider" target="_blank"></li>
+												<li><a href="http://pubg.qq.com/main.shtml" target="_blank">绝地求生</a></li>
+												<li role="separator" class="divider"></li>
+												<li><a href="https://pvp.qq.com/" target="_blank">王者荣耀</a></li>
+											</ul>
+										</li>
+										<li><a href="zhibo.html" target="_blank">直播</a><span class="sr-only">(current)</span></li>
+										<li><a href="xuanshou.html#abc" target="_blank">选手</a><span class="sr-only">(current)</span></li>
+										<li><a href="xuanshou.html" target="_blank">俱乐部</a><span class="sr-only">(current)</span></li>
+			
+										<ul class="nav navbar-nav">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+												 id="hh1">赛事
+													<span class="caret"></span></a>
+												<ul class="dropdown-menu" style="display:none;" id="caidan1">
+													<li><a href="https://lpl.qq.com/" target="_blank">LPL</a></li>
+													<li><a href="http://s.163.com/special/wcs2016cn/" target="_blank">WCS</a></li>
+													<li><a href="http://gleague.gamefy.cn/live.php" target="_blank">G联赛</a></li>
+													<li role="separator" class="divider" target="_blank"></li>
+													<li><a href="pvp.qq.com/webplat/info/news_version3/15592/22661/22664/25563/m14593/list_1.shtml
+													"
+														 target="_blank">KPL</a></li>
+												</ul>
+											</li>
+										</ul>
+										<li class="active"><a href="wenhua.html" target="_blank">文化</a></li>
+										<li><a href="women.html" target="_blank" class="navbar-right">关于我们</a>
+									</ul>
+								</div><!-- /.navbar-collapse -->
+			<script type="text/javascript" charset="utf-8">
+				function a1() {
+					window.open("game.html", "_blank");
+				}
+				
+			</script>
+	
+					<span class="navbar-right">
+						<span class="top-social-info ">
+							<a href="#" data-toggle="tooltip" data-placement="top" title="QQ" style="position: relative;right: 300%; color: #ccc;"><i
+								 class="fa fa-qq" aria-hidden="true"></i></a>
+							<a href="#" data-toggle="tooltip" data-placement="top" title="微信" style="position: relative;right: 250%;color: #ccc; "><i
+								 class="fa fa-weixin" aria-hidden="true"></i></a>
+							<a href="#" data-toggle="tooltip" data-placement="top" title="微博" style="position: relative;right: 200%;color: #ccc;"><i
+								 class="fa fa-weibo" aria-hidden="true"></i></a>
+							<a href="#" data-toggle="tooltip" data-placement="top" title="Facebook" style="position: relative;right: 150%;color: #ccc;"><i
+								 class="fa fa-facebook" aria-hidden="true"></i></a>
+							<a href="#" data-toggle="tooltip" data-placement="top" title="Twitter" style="position: relative;right: 100%;color: #ccc;"><i
+								 class="fa fa-twitter" aria-hidden="true"></i></a>
+						</span>
+	
+					</span>
+				</nav>
+			</div>
+	
+	<script  type="text/javascript" charset="utf-8">
+		
+		$(document).ready(function(){
+	        $('#hh').hover(function() {
+	            $("#caidan").css('display', 'block');
+	        }, function() {
+	           $("#caidan").css('display', 'none');
+	        });
+	
+	        $("#caidan").hover(function() {
+	           $(this).css('display', 'block');;
+	        }, function() {
+	           $(this).css('display', 'none');
+	        });
+	 })
+		$(document).ready(function(){
+		       $('#hh1').hover(function() {
+		           $("#caidan1").css('display', 'block');
+		       }, function() {
+		          $("#caidan1").css('display', 'none');
+		       });
+		
+		       $("#caidan1").hover(function() {
+		          $(this).css('display', 'block');;
+		       }, function() {
+		          $(this).css('display', 'none');
+		       });
+		})
+		
+		
+		
+	</script>
+
+
+		<div class="row">
+			<div class="col-md-1 col-sm-1">
+
+			</div>
+			<div class="col-md-10 col-sm-10">
+				<div class="page-header">
+					<h1>电竞的起源和发展</small></h1>
+				</div>
+			</div>
+			<div class="col-md-1 col-sm-1"></div>
+		</div>
+		<div class="row">
+			<div style="text-align:center;clear:both;">
+
+			</div>
+			<div class="about-history" id="fzlc">
+				<header class="about-title title-white">
+					<h3 class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">发展历程</h3>
+					<p class="wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">HISTORY</p>
+				</header>
+				<div class="about-history-list wow zoomIn" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: zoomIn;">
+					<div class="flex-viewport" style="overflow: hidden; position: relative;">
+						<ul class="slides clearfix list" style="width: 2600%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+							<li style="width: 253px; float: left; display: block;">
+								<div class="item">
+									<h3>2019</h3>
+									<div class="desc">
+										<p>
+										中国互联网协会电子竞技工作委员会筹备组成立会议暨“数字电竞与智能经济”电子竞技行业峰会在清华大学伟伦楼召开。会议宣布，中国互联网协会电子竞技工作委员会筹备组正式成立。
+										</p>
+									</div>
+								</div>
+							</li>
+							<li style="width: 253px; float: left; display: block;">
+								<div class="item">
+									<h3>2018</h3>
+									<div class="desc">
+										<p>
+											英雄联盟2018季中冠军赛的决赛上，来自中国LPL的RNG战队3-1击溃韩国卫冕冠军KZ，拿下第二座季中冠军赛冠军奖杯。
+											绝地求生PGI全球总决赛，来自中国的OMG战队以3425分夺得总冠军。
+										</p>
+									</div>
+								</div>
+							</li>
+							<li style="width: 253px; float: left; display: block;">
+								<div class="item">
+									<h3>2017</h3>
+									<div class="desc">
+										<p>第二届DOTA2亚洲邀请赛（DAC）落幕，中国战队iG在决赛中以3:0的比分战胜外国劲旅OG战队夺得冠军，整个赛事多次得到CCTV报道。</p>
+									</div>
+								</div>
+							</li>
+							<li style="width: 253px; float: left; display: block;">
+								<div class="item">
+									<h3>2016</h3>
+									<div class="desc">
+										<p>Wings战队决赛3：0击败Liquid获得本次ESL ONE世界冠军，3：1击败DC战队夺得2016年DOTA国际邀请赛冠军，获得9139002美元（约合人民币6048万）的奖金，捍卫了中国DOTA的荣耀。</p>
+									</div>
+								</div>
+							</li>
+							<li style="width: 253px; float: left; display: block;">
+								<div class="item">
+									<h3>2014</h3>
+									<div class="desc">
+										<p>在美国西雅图结束的第四届DOTA2国际邀请赛（TI4)中，来自中国的Newbee战队拿到总决赛冠军，得到了500万美元(约合3100万人民币)的奖金。</p>
+									</div>
+								</div>
+							</li>
+							<li style="width: 253px; float: left; display: block;">
+								<div class="item">
+									<h3>2012</h3>
+									<div class="desc">
+										<p>第二届DOTA2国际邀请赛，IG夺冠 赢得100万美元奖金。<br>WCG2012魔兽项目，中国包揽前三，Ted是WCG史上第一个冠军亡灵。<br>WE战队在IPL5获得中国第一个LOL世界冠军</p>
+									</div>
+								</div>
+							</li>
+							<li style="width: 253px; float: left; display: block;">
+								<div class="item">
+									<h3>2008</h3>
+									<div class="desc">
+										<p>十名电子竞技选手成为北京奥运火炬手。<br>成都市第十一届运动会引入电子竞技为正式比赛项目。<br>国家体育总局整合现有的体育项目，将电子竞技重新定义为第78号体育运动。
+</p>
+									</div>
+								</div>
+							</li>
+							<li style="width: 253px; float: left; display: block;">
+								<div class="item">
+									<h3>2004</h3>
+									<div class="desc">
+										<p>第一届中国电子竞技运动会（简称CEG）正式发布。国家广电总局发布网游类电视节目封杀令，众多电竞节目受殃及。孟阳（RocketBoy）在Fatal1ty长城DOOM3挑战赛夺冠，赢得100万人民币奖金。</p>
+									</div>
+								</div>
+							</li>
+							<li style="width: 253px; float: left; display: block;">
+								<div class="item">
+									<h3>2003</h3>
+									<div class="desc">
+										<p>电子竞技成为中国体育总局承认的第99个正式体育项目。WCG2001 中国选手获得星际争霸2V2世界冠军 瑞典SK战队做客《电子竞技世界》。后任韩国总统的李明博（2007-2012在任）曾在2003年的WCG现场与星际选手ogogo打表演赛。</p>
+									</div>
+								</div>
+							</li>
+							<li style="width: 253px; float: left; display: block;">
+								<div class="item">
+									<h3>1998</h3>
+									<div class="desc">
+										<p>1998年，《星际争霸》发行了。经济危机导致大量失业人员，许多人一场关键性的比赛，可以吸引几万人到场观看 
+利用这款游戏打发时间。这种偶然的历史机遇成就了令人惊叹的韩国电竞。</p>
+									</div>
+								</div>
+							</li>
+							<li style="width: 253px; float: left; display: block;">
+								<div class="item">
+									<h3>1997</h3>
+									<div class="desc">
+										<p>金融危机过后，韩国政府开始了努力改变产业结构。很快，韩国的电影电视产业、游戏动漫产业开始得到政府的扶持和快速发展，而电子竞技产业作为一支国民经济的生力军也得到了巨大的发展契机！</p>
+									</div>
+								</div>
+							</li>
+							<li style="width: 253px; float: left; display: block;">
+								<div class="item">
+									<h3>1986</h3>
+									<div class="desc">
+										<p>早在年美国ABC频道的直播上，通过电视直播两个孩子间比试玩任天堂游戏机，被视为电子竞技的
+ 开始。红白机是家用机的早期经典。在红白机诞生以后，电子竞技的雏形就已经出现</p>
+									</div>
+								</div>
+							</li>
+							<li style="width: 253px; float: left; display: block;"></li>
+						</ul>
+					</div>
+					<ul class="flex-direction-nav">
+						<li class="flex-nav-prev"><a class="flex-prev  " href="#">&lt;</a></li>
+						<li class="flex-nav-next"><a class="flex-next " href="#">&gt;</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+
+		<script>
+			$(function() {
+				if ((navigator.userAgent.match(
+						/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+					))) {
+					//phone
+				} else {
+					//PC
+					$(".about-history-list").flexslider({
+						animation: "slide",
+						slideshow: false,
+						controlNav: false,
+						itemWidth: 253,
+						itemMargin: 31,
+						prevText: "<",
+						nextText: ">",
+						move: 1
+					});
+				}
+			});
+		</script>
+
+		<div class="row">
+			<div class="col-md-1 col-sm-1">
+			</div>
+
+			<div class="col-md-10">
+				<div class="page-header">
+					<h1>电竞行业</small></h1>
+				</div>
+			</div>
+
+			<div class="col-md-1 col-sm-1">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-1 col-sm-1">
+			</div>
+
+			<div class="col-md-10">
+				<div class="">
+					<h2>电竞行业前景</small></h2>
+				</div>
+			</div>
+
+			<div class="col-md-1 col-sm-1">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-1 col-sm-1">
+
+			</div>
+
+			<div class="col-md-6 ">
+				<div class="row">
+					<div class="col-md-12  col-sm-12">
+						<div id="container" style="height: 400px;"></div>
+
+						<script>
+							Highcharts.chart('container', {
+
+								
+								chart: {
+									type: 'cylinder',
+									options3d: {
+										enabled: true,
+										alpha: 15,
+										beta: 15,
+										depth: 50,
+										viewDistance: 25
+									}
+								},
+								title: {
+									text: '电竞融资金额/(亿)'
+								},
+			xAxis: {
+				categories: ['2011', '2012', '2013', '2014','2015', '2016', '2017', '2018']
+			},
+							
+								plotOptions: {
+									series: {
+										depth: 25,
+										colorByPoint: true
+									}
+								},
+								series: [{
+									data: [0.01, 0.03, 0.03, 2.9, 17.2, 50.9, 31.7, 76.9],
+									name: 'Cylinders',
+									showInLegend: false
+								}]
+							});
+						</script>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+
+						<div id="container1" style="height: 400px; margin-top: 50px;"></div>
+						<script type="text/javascript">
+							var chart = Highcharts.chart('container1', {
+								chart: {
+									type: 'column',
+									options3d: {
+										enabled: true,
+										alpha: 15,
+										beta: 15,
+										viewDistance: 25,
+										depth: 40
+									},
+									marginTop: 80,
+									marginRight: 40
+								},
+								title: {
+									text: '电竞市场结构'
+								},
+								xAxis: {
+									categories: ['2015', '2016', '2017', '2018']
+								},
+								yAxis: {
+									allowDecimals: false,
+									min: 0,
+									title: {
+										text: '用户规模'
+									}
+								},
+								tooltip: {
+									headerFormat: '<b>{point.key}</b><br>',
+									pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: {point.y} / {point.stackTotal}'
+								},
+								plotOptions: {
+									column: {
+										stacking: 'normal',
+										depth: 40
+									}
+								},
+								series: [{
+									name: '移动市场占比',
+									data: [16.6, 27.3, 46.3, 52.9],
+									stack: 'male'
+								}, {
+									name: '端游市场占比',
+									data: [80.1, 66.9, 46, 37.2],
+									stack: 'male'
+								}, {
+									name: '游戏用户人人数/(百万)',
+									data: [100, 130, 260, 320],
+									stack: 'female'
+								}]
+							});
+						</script>
+
+
+
+
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-12  col-sm-12">
+						<div id="container2" style="height: 400px;margin-top: 20px;"></div>
+						<script type="text/javascript">
+							var chart = Highcharts.chart('container2', {
+								chart: {
+									type: 'pie',
+									options3d: {
+										enabled: true,
+										alpha: 45,
+										beta: 0
+									}
+								},
+								title: {
+									text: '2017年游戏营运商收入百分比'
+								},
+								tooltip: {
+									pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+								},
+								plotOptions: {
+									pie: {
+										allowPointSelect: true,
+										cursor: 'pointer',
+										depth: 35,
+										dataLabels: {
+											enabled: true,
+											format: '{point.name}'
+										}
+									}
+								},
+								series: [{
+									type: 'pie',
+									name: '浏览器占比',
+									data: [
+										['腾讯', 48.0],
+										['网易', 18.0],
+										{
+											name: '欢聚时代',
+											y: 6,
+											sliced: true,
+											selected: true
+										},
+										['三七互娱', 15],
+										['完美世界', 3],
+										['其他', 26]
+									]
+								}]
+							});
+						</script>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+						<div id="container3" style="height: 400px ;margin-top: 30px;"></div>
+						<script>
+							var chart = Highcharts.chart('container3', {
+								chart: {
+									type: 'pie',
+									options3d: {
+										enabled: true,
+										alpha: 45
+									}
+								},
+								title: {
+									text: '电竞行业发展格局(%)'
+								},
+								subtitle: {
+									text: '该数据来源网上'
+								},
+								plotOptions: {
+									pie: {
+										innerSize: 100,
+										depth: 45
+									}
+								},
+								series: [{
+									name: '该部分占2017电竞游戏市场收入的百分比',
+									data: [
+										['电竞直播', 38],
+										['电竞赛事', 30],
+										['电竞俱乐部', 7],
+										['电竞内容制作', 7],
+										['电竞培训', 5],
+										['梨电竞媒体', 5],
+										['电竞大数据', 5],
+										['电竞游戏', 2],
+										['电竞社交', 1]
+									]
+								}]
+							});
+						</script>
+
+
+
+					</div>
+
+
+
+
+				</div>
+			</div>
+
+
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-1 col-sm-1">
+			</div>
+
+			<div class="col-md-10">
+				<div class="">
+					<h2>电竞行业产业链</small></h2>
+				</div>
+			</div>
+
+			<div class="col-md-1 col-sm-1">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-1  ">
+
+			</div>
+			<div class="col-md-10 " style="height:620px">
+				<div class="wrapper ">
+					<div class="svg-container">
+						<svg version="1.1" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet" class="svg-content">
+
+							<defs>
+								<marker id="arrow" markerWidth="4" markerHeight="10" viewBox="-2 -4 4 4" refX="0" refY="0" markerUnits="strokeWidth"
+								 orient="auto">
+									<polyline points="2,-2 0,0 2,2" stroke="#443c3d" stroke-width="0.75px" fill="none" />
+								</marker>
+							</defs>
+
+
+							<g class="box-group">
+								<g transform="translate(-5)">
+									<circle fill="#000" cx="55" cy="50" r="45" opacity="1" />
+									<text x="28" y="58" font-family="Open Sans Condensed" font-size="26" stroke="none" fill="#f5f3e7" font-weight="100"
+									 style="text-transform:uppercase; letter-spacing: 1px">Start</text>
+									<line x1="102" x2="135" y1="50" y2="50" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+								</g>
+
+								<line x1="100" x2="136" y1="50" y2="50" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+								<g transform="translate(136)">
+									<rect fill="#66cc00" x="2" y="25" rx="3" ry="3" width="90" height="50" />
+									<text x="16" y="47" font-family="Open Sans Condensed" font-size="14" stroke="none" fill="#f5f3e7" font-weight="900"
+									 style="text-transform:uppercase; letter-spacing: 1px">上游
+										<tspan x="26" dy="17">游戏研发</tspan>
+									</text>
+								</g>
+
+								<line x1="230" x2="268" y1="50" y2="50" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+								<g transform="translate(268)">
+									<rect fill="#66cc00" x="2" y="25" rx="3" ry="3" width="90" height="50" />
+									<text x="16" y="47" font-family="Open Sans Condensed" font-size="14" stroke="none" fill="#f5f3e7" font-weight="900"
+									 style="text-transform:uppercase; letter-spacing: 上游px">上游
+										<tspan x="26" dy="17">游戏营运</tspan>
+									</text>
+								</g>
+
+								<line x1="362" x2="400" y1="50" y2="50" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+								<g transform="translate(400)">
+									<rect fill="#66cc00" x="2" y="25" rx="3" ry="3" width="90" height="50" />
+									<text x="16" y="47" font-family="Open Sans Condensed" font-size="14" stroke="none" fill="#f5f3e7" font-weight="900"
+									 style="text-transform:uppercase; letter-spacing: 1px">上游
+										<tspan x="26" dy="17">监管部门</tspan>
+									</text>
+								</g>
+							</g>
+
+							<line x1="450" x2="450" y1="77" y2="124" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+							<g class="box-group" transform="translate(0,100)">
+								<g transform="translate(5)">
+									<rect fill="#66cc00" x="2" y="25" rx="3" ry="3" width="90" height="50" />
+									<text x="16" y="47" font-family="Open Sans Condensed" font-size="14" stroke="none" fill="#f5f3e7" font-weight="900"
+									 style="text-transform:uppercase; letter-spacing: 1px">中游
+										<tspan x="26" dy="17">广告投放</tspan>
+									</text>
+								</g>
+
+								<line x1="100" x2="136" y1="50" y2="50" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+								<g transform="translate(136)">
+									<rect fill="#66cc00" x="2" y="25" rx="3" ry="3" width="90" height="50" />
+									<text x="16" y="47" font-family="Open Sans Condensed" font-size="14" stroke="none" fill="#f5f3e7" font-weight="900"
+									 style="text-transform:uppercase; letter-spacing: 1px">中游
+										<tspan x="26" dy="17">赛事内容制作</tspan>
+									</text>
+								</g>
+
+								<line x1="230" x2="268" y1="50" y2="50" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+								<g transform="translate(268)">
+									<polygon points="60,20 100,40 100,80 60,100 20,80 20,40" fill="#72508d" transform="translate(-12,-10)" />
+									<rect fill="#72508d" stroke="#72508d" stroke-width="0" x="2" y="25" rx="3" ry="3" width="90" height="50" />
+									<text x="16" y="47" font-family="Open Sans Condensed" font-size="14" stroke="none" fill="#fff" font-weight="900"
+									 style="text-transform:uppercase; letter-spacing: 1px">中游
+										<tspan x="26" dy="17">电竞俱乐部</tspan>
+									</text>
+								</g>
+
+								<line x1="362" x2="400" y1="50" y2="50" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" marker-start="url(#arrow)" />
+
+								<g transform="translate(400)">
+									<rect fill="#66cc00" x="2" y="25" rx="3" ry="3" width="90" height="50" />
+									<text x="16" y="47" font-family="Open Sans Condensed" font-size="14" stroke="none" fill="#f5f3e7" font-weight="900"
+									 style="text-transform:uppercase; letter-spacing: 1px">中游
+										<tspan x="26" dy="17">赛事营运</tspan>
+									</text>
+								</g>
+							</g>
+
+							<line x1="50" x2="50" y1="177" y2="224" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+							<g class="box-group" transform="translate(0,200)">
+								<g transform="translate(5)">
+									<rect fill="#66cc00" x="2" y="25" rx="3" ry="3" width="90" height="50" />
+									<text x="16" y="47" font-family="Open Sans Condensed" font-size="14" stroke="none" fill="#f5f3e7" font-weight="900"
+									 style="text-transform:uppercase; letter-spacing: 1px">下游
+										<tspan x="26" dy="17">电竞直播</tspan>
+									</text>
+								</g>
+
+								<line x1="100" x2="136" y1="50" y2="50" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+								<g transform="translate(136)">
+									<rect fill="#66cc00" x="2" y="25" rx="3" ry="3" width="90" height="50" />
+									<text x="16" y="47" font-family="Open Sans Condensed" font-size="14" stroke="none" fill="#f5f3e7" font-weight="900"
+									 style="text-transform:uppercase; letter-spacing: 1px">下游
+										<tspan x="26" dy="17">电竞媒体</tspan>
+									</text>
+								</g>
+
+								<line x1="230" x2="268" y1="50" y2="50" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+								<g transform="translate(268)">
+									<rect fill="#66cc00" x="2" y="25" rx="3" ry="3" width="90" height="50" />
+									<text x="16" y="47" font-family="Open Sans Condensed" font-size="14" stroke="none" fill="#f5f3e7" font-weight="900"
+									 style="text-transform:uppercase; letter-spacing: 1px">下游
+										<tspan x="26" dy="17">电竞解说员</tspan>
+									</text>
+								</g>
+
+								<line x1="362" x2="400" y1="50" y2="50" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
+
+								<g transform="translate(392)">
+									<circle fill="#000" cx="55" cy="50" r="45" opacity="1" />
+									<text x="37" y="58" font-family="Open Sans Condensed" font-size="26" stroke="none" fill="#f5f3e7" font-weight="100"
+									 style="text-transform:uppercase; letter-spacing: 1px">End</text>
+								</g>
+							</g>
+
+						</svg>
+					</div>
+				</div>
+				<script type="text/javascript" charset="utf-8">
+					var svg = document.getElementsByTagName("svg");
+
+					var rect = document.getElementsByTagName("rect");
+
+					var text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					text.setAttribute('x', '10');
+					text.setAttribute('y', '20');
+					text.setAttribute('fill', '#000');
+					text.textContent = 'Hello, I am a blah blah blah blah blah';
+				</script>
+
+			</div>
+			<div class="col-md-1 ">
+
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-1 col-sm-1">
+			</div>
+
+			<div class="col-md-10">
+				<div class="">
+					<h2>人才需求</small></h2>
+				</div>
+
+
+				<div class="col-md-1 col-sm-1">
+				</div>
+			</div>
+
+
+			<div class="row">
+
+
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-1 col-sm-1 col-xs-1">
+
+						</div>
+						<div class="col-md-10 col-sm-10 col-xs-11">
+							<div class="page-header">
+								<h3>电竞专业</small></h3>
+							</div>
+						</div>
+						<div class="col-md-1 col-sm-1">
+
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-md-1">
+
+						</div>
+
+						<div class="col-md-11">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<p style="text-indent:2em;font-size: 3em"><b>电竞专业 你敢报考吗？</b></p>
+									<p style="text-indent:2em;color: #D91294"><b>电竞这个行业在最近两年是火了起来，并且是逐渐的步入了正轨，因此一些高校也是开设了电竞专业。不过要说的是，电竞专业并不是以培养职业选手为目的而开设的。因为职业选手都是天才，电竞专业的人才是为这些天才做服务的。简单来说，除了不能培养选手，电竞专业可以培养出电竞行业的所有从业人员。</b></p>
+									<p style="text-indent:2em"><b>目前开设电竞专业的三个高校：锡林郭勒职业学院 天津体育学院 四川电影电视学院。</b></p>
+									
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+
+
+
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-1 col-sm-1 col-xs-1">
+
+						</div>
+						<div class="col-md-10 col-sm-10 col-xs-11">
+							<div class="page-header">
+								<h3>最新资讯</small></h3>
+							</div>
+
+							<div class="row">
+								
+								<div class="col-md-12 col-sm-12 col-xs-12">
+									<div class="panel panel-default">
+	
+										<div class="panel-body " style="margin-top: 25px;">
+											<div class="list-group" id="box" style="margin: auto;">
+												<ul id="cont1" class="list-group">
+													<li><a href="#" class="list-group-item ">
+															Cras justo odio
+														</a></li>
+													<li><a href="#" class="list-group-item">英雄联盟职业联赛 LGD FPX RNG胜出</a></li>
+													<li><a href="#" class="list-group-item">英雄联盟四队争三席JDG一身冷汗 各队如何稳进季后赛</a></li>
+													<li><a href="#" class="list-group-item">FPX迎战VG欲取四连胜 OMG主场迎战RNG</a></li>
+													<li><a href="#" class="list-group-item">Lstars四局三鸡高居积分榜第一！YDD火力全开成杀人王！ </a></li>
+													<li><a href="#" class="list-group-item">《绝地求生》亚洲邀请赛（以下简称PAI）即将于1.10-1.12在中国澳门举行。本次中国大陆将会有4只队伍征战此次邀请赛。</a></li>
+													<li><a href="#" class="list-group-item">梦幻联赛S11决赛日：VG五局拉满击败VP夺冠 锁定TI9直邀名额</a></li>
+													<li><a href="#" class="list-group-item">KRKPL快讯：新军VSG实力强劲，3：1爆冷击败CW，名刀水晶再现江湖</a></li>
+													<li><a href="#" class="list-group-item">CF百城联赛将于4月6日开启</a></li>
+												</ul> 
+												<ul id="cont2">
+	
+												</ul>
+											</div>
+											<script type="text/javascript" charset="utf-8">
+												var dome = document.getElementById("box");
+												var dome1 = document.getElementById("cont1");
+												var dome2 = document.getElementById("cont2");
+												var speed = 50; //设置向上轮动的速度
+												dome2.innerHTML = dome1.innerHTML; //复制节点
+												function moveTop() {
+													if (dome1.offsetHeight - dome.scrollTop <= 0) {
+														dome.scrollTop = 0;
+													} else {
+														dome.scrollTop++;
+													}
+												}
+												var myFunction = setInterval("moveTop()", speed);
+												dome.onmouseover = function() {
+													clearInterval(myFunction);
+												}
+												dome.onmouseout = function() {
+													myFunction = setInterval(moveTop, speed);
+												}
+											</script>
+	
+	
+	
+	
+	
+											<div>
+											</div>
+										</div>
+	
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-1 col-sm-1">
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="row">
+					<div class="col-md-1 col-sm-1 col-xs-1">
+
+					</div>
+					<div class="col-md-10 col-sm-10 col-xs-11  ">
+						<div class="">
+							<h1>电竞精神</small></h1>
+						</div>
+					</div>
+					<div class="col-md-1 col-sm-1">
+
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="jumbotron">
+						<div class="container">
+							<h1>Hello, 电竞!</h1>
+							<p style="text-indent:2em;"><b>电竞不只是游戏，更是青春，有多少青春便有多少梦，哪个少年还没有一个电竞梦？这样一个充满精彩的电竞怎能不让人着迷，怎能不让人心疼！这样的电竞，早已超出了“玩”的界限。这样的电竞更不是某手某音可以比的！这是电竞，这是积极向上的体育项目，全华班的RNG，给我轻轻的拥抱，我抬起头问你，我能不能因为你而骄傲，我的泪水打湿了稚嫩的脸庞，你大气的挥挥手，年轻的你才是希望的模样！</b></p>
+							<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+						</div>
+					</div>
+				</div>
+
+
+
+				<link rel="stylesheet" type="text/css" href="css/aboutStyle.css"/>
+				
+				<footer id="footer">
+				  <div class="container">
+				    <div class="row">
+				      <div class="col-sm-6">Copyright © 2019 All Rights Reserved.</div>
+				
+				    </div>
+				  </div>
+				</footer>
+
+
+
+				<a class="glyphicon glyphicon-arrow-up" id="goToTop" style="background: #32383E;font-size: 25px;
+		color: #EDEDED;position: fixed;height: 30px; width: 30px ; right:30px;top: 500px; display: block;cursor:pointer;text-decoration:none">
+
+				</a>
+
+
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$("#goToTop").hide() //隐藏go to top按钮
+						$(function() {
+							$(window).scroll(function() {
+								if ($(this).scrollTop() > 1) { //当window的scrolltop距离大于1时，go to top按钮淡出，反之淡入
+									$("#goToTop").fadeIn();
+								} else {
+									$("#goToTop").fadeOut();
+								}
+							});
+						});
+
+
+						// 给go to top按钮一个点击事件
+						$("#goToTop").click(function() {
+							$("html,body").animate({
+								scrollTop: 0
+							}, 600); //点击go to top按钮时，以800的速度回到顶部，这里的800可以根据你的需求修改
+							return false;
+						});
+					});
+
+
+					$(function() {
+						var banOffTop = $(".hx").offset().top; //获取到距离顶部的垂直距离
+						var scTop = 0; //初始化垂直滚动的距离
+						$(document).scroll(function() {
+							scTop = $(this).scrollTop(); //获取到滚动条拉动的距离
+							//console.log(scTop);查看滚动时，垂直方向上，滚动条滚动的距离
+							if (scTop >= banOffTop) {
+								//核心部分：当滚动条拉动的距离大于等于导航栏距离顶部的距离时，添加指定的样式
+								$(".hx").addClass("fixDiv");
+							} else {
+								$(".hx").removeClass("fixDiv");
+							}
+
+						})
+					})
+				</script>
+
+
+
+
+	</body>
+</html>

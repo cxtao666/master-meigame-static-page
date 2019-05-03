@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		<script  type="text/javascript" charset="utf-8">
+			
+		function one (){
+
+			var a ;
+			this.a=1;
+			
+		}
+		one.prototype.b=function(){
+			var c =2;
+			console.log(c);
+		}
+		
+		
+		function two(){
+			
+		}	
+		two.prototype=new one();
+			var three = new two () ;
+						three.b();
+		</script>
+		
+		
+		
+		
+	
+		
+		
+	</body>
+</html>

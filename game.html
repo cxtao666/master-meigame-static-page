@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>袂GAME|游戏</title>
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/bootstrap1.min.css">
+	
+	<script src="js/jquery/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap1.js"></script>
+	
+	<style type="text/css">
+		.fixDiv{
+			 position:fixed;
+			 width: 100%;
+  top: 0;
+  z-index: 1;
+}
+		
+		
+	i{
+		font-style: normal;
+	}	
+		
+		
+		.content {
+		  display: flex;
+		  margin: 0 auto;
+		  justify-content: center;
+		  align-items: center;
+		  flex-wrap: wrap;
+		  max-width: 1150px;
+		}
+		
+		.heading {
+		  width: 100%;
+		  margin-left: 1rem;
+		  font-weight: 900;
+		  font-size: 1.618rem;
+		  text-transform: uppercase;
+		  letter-spacing: .1ch;
+		  line-height: 1;
+		  padding-bottom: .5em;
+		  margin-bottom: 1rem;
+		  position: relative;
+		}
+		.heading:after {
+		  display: block;
+		  content: '';
+		  position: absolute;
+		  width: 60px;
+		  height: 4px;
+		  background: linear-gradient(135deg, #1a9be6, #1a57e6);
+		  bottom: 0;
+		}
+		
+		.description {
+		  width: 100%;
+		  margin-top: 0;
+		  margin-left: 1rem;
+		  margin-bottom: 3rem;
+		}
+		
+		.card {
+		  color: inherit;
+		  cursor: pointer;
+		  width: calc(33% - 2rem);
+		  min-width: calc(33% - 2rem);
+		  height: 400px;
+		  min-height: 400px;
+		  perspective: 1000px;
+		  margin: 1rem;
+		  position: relative;
+		}
+		@media screen and (max-width: 800px) {
+		  .card {
+		    width: calc(50% - 2rem);
+		  }
+		}
+		@media screen and (max-width: 500px) {
+		  .card {
+		    width: 100%;
+		  }
+		}
+		
+		.front,
+		.back {
+		  display: flex;
+		  border-radius: 6px;
+		  background-position: center;
+		  background-size: cover;
+		  text-align: center;
+		  justify-content: center;
+		  align-items: center;
+		  position: absolute;
+		  height: 100%;
+		  width: 100%;
+		  -webkit-backface-visibility: hidden;
+		  backface-visibility: hidden;
+		  transform-style: preserve-3d;
+		  transition: ease-in-out 600ms;
+		}
+		
+		.front {
+		  background-size: cover;
+		  padding: 2rem;
+		  font-size: 1.618rem;
+		  font-weight: 600;
+		  color: #fff;
+		  overflow: hidden;
+		  font-family: Poppins, sans-serif;
+		}
+		.front:before {
+		  position: absolute;
+		  display: block;
+		  content: '';
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  bottom: 0;
+		  background: linear-gradient(135deg, #1a9be6, #1a57e6);
+		  opacity: .25;
+		  z-index: -1;
+		}
+		.card:hover .front {
+		  transform: rotateY(180deg);
+		}
+		.card:nth-child(even):hover .front {
+		  transform: rotateY(-180deg);
+		}
+		
+		.back {
+		  background: #fff;
+		  transform: rotateY(-180deg);
+		  padding: 0 2em;
+		}
+		.card:hover .back {
+		  transform: rotateY(0deg);
+		}
+		.card:nth-child(even) .back {
+		  transform: rotateY(180deg);
+		}
+		.card:nth-child(even):hover .back {
+		  transform: rotateY(0deg);
+		}
+		
+		.button {
+		  transform: translateZ(40px);
+		  cursor: pointer;
+		  -webkit-backface-visibility: hidden;
+		  backface-visibility: hidden;
+		  font-weight: bold;
+		  color: #fff;
+		  padding: .5em 1em;
+		  border-radius: 100px;
+		  font: inherit;
+		  background: linear-gradient(135deg, #1a9be6, #1a57e6);
+		  border: none;
+		  position: relative;
+		  transform-style: preserve-3d;
+		  transition: 300ms ease;
+		}
+		.button:before {
+		  transition: 300ms ease;
+		  position: absolute;
+		  display: block;
+		  content: '';
+		  transform: translateZ(-40px);
+		  -webkit-backface-visibility: hidden;
+		  backface-visibility: hidden;
+		  height: calc(100% - 20px);
+		  width: calc(100% - 20px);
+		  border-radius: 100px;
+		  left: 10px;
+		  top: 16px;
+		  box-shadow: 0 0 10px 10px rgba(26, 87, 230, 0.25);
+		  background-color: rgba(26, 87, 230, 0.25);
+		}
+		.button:hover {
+		  transform: translateZ(55px);
+		}
+		.button:hover:before {
+		  transform: translateZ(-55px);
+		}
+		.button:active {
+		  transform: translateZ(20px);
+		}
+		.button:active:before {
+		  transform: translateZ(-20px);
+		  top: 12px;
+		}
+	</style>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</head>
+	
+	
+	<body style="overflow:-Scroll;overflow-x:hidden;background-color: antiquewhite">
+	
+	
+			<div style="width: 100%;">
+				<div class="container" style="height:120px;">
+					<div class="row" style="height:20px"></div>
+					<div class="row" style="height:50px">
+		
+						<div class="container">
+							<div class="col-2  col-md-offset-9 col-sm-offset-9  col-xs-offset-5 ">
+								<input type="button" value="登录|注册" class="btn-block  btn-success btn-light btn-sm">
+							</div>
+		
+						</div>
+		
+		
+					</div>
+		
+					<div class="row">
+		
+						<div class="col-md-6  col-sm-6  col-xs-3 ">
+		
+							<div class="container  " style="font-size:large ;font-weight: bolder;font-style: italic">
+								<a style="text-decoration:none" class="lead">袂GAME</a>
+							</div>
+						</div>
+		
+		
+		
+						<div class="col-md-1 col-sm-1 col-xs-1"></div>
+		
+		
+		
+		
+						<div class="col-md-5 col-sm-5  col-xs-6">
+							<div class="col-md-3 col-sm-3  col-xs-3 ">
+								<div class="dropdown" style="left:55%;  position: relative; ">
+									<button type="button" class="btn dropdown-toggle btn-info"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  id="one">
+										全部
+										<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu"  id="two1" >
+										<li role="presentation">
+											<a role="menuitem" tabindex="" href="#">游戏</a>
+										</li>
+										<li role="presentation">
+											<a role="menuitem" tabindex="" href="#">赛事</a>
+										</li>
+										<li role="presentation">
+											<a role="menuitem" tabindex="" href="xuanshou.html" target="_blank">选手</a>
+										</li>
+										<li role="presentation" class="divider"></li>
+										<li role="presentation">
+											<a role="menuitem" tabindex="" href="zhibo.html" target="_blank">直播</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<script type="text/javascript" charset="utf-8">
+								$(document).ready(function(){
+											 $('#one').hover(function() {
+													 $("#two1").css('display', 'block');
+											 }, function() {
+													$("#two1").css('display', 'none');
+											 });
+									
+											 $("#two1").hover(function() {
+													$(this).css('display', 'block');;
+											 }, function() {
+													$(this).css('display', 'none');
+											 });
+								})
+								
+								
+							</script>
+	
+							<div class="col-md-5 col-sm-5 col-xs-6">
+								<div class="input-group">
+									<input type="text" class="form-control  " id="exampleInputAmount" placeholder="Search">
+									<span class="input-group-btn" style="position:relative; top:-1px    ">
+										<button type="button" class="btn btn-default  glyphicon-search glyphicon"></button>
+									</span></div>
+							</div>
+		
+						</div>
+					</div>
+				</div>
+			</div>
+	
+	
+		<div style="height: 120px;" class="hx">
+					<nav class="navbar navbar-default  navbar-inverse " style="height: 120px;">
+						<div class="container-fluid  ">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+								 aria-expanded="false">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<a class="navbar-brand" href="#">袂GAME</a>
+							</div>
+		
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav">
+									<li><a href="index.html" target="_blank">主页<span class="sr-only">(current)</span></a></li>
+		
+									<li class="dropdown" >
+										<a class="active" href="game.html" target="_blank" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true"
+										 aria-expanded="false" id="hh" onclick="a1()">游戏
+											<span class="caret"></span></a>
+										<ul class="dropdown-menu" style="display:none;" id="caidan">
+											<li><a href="https://www.dota2.com.cn/index.htm" target="_blank">DOTA2</a></li>
+											<li><a href="http://sc2.blizzard.cn/home/" target="_blank">星际争霸</a></li>
+											<li><a href="http://dz.blizzard.cn/" target="_blank">魔兽争霸</a></li>
+											<li><a href="https://lol.qq.com/" target="_blank">英雄联盟</a></li>
+											<li role="separator" class="divider" target="_blank"></li>
+											<li><a href="http://pubg.qq.com/main.shtml" target="_blank">绝地求生</a></li>
+											<li role="separator" class="divider"></li>
+											<li><a href="https://pvp.qq.com/" target="_blank">王者荣耀</a></li>
+										</ul>
+									</li>
+									<li><a href="zhibo.html" target="_blank">直播</a><span class="sr-only">(current)</span></li>
+									<li><a href="xuanshou.html#abc" target="_blank">选手</a><span class="sr-only">(current)</span></li>
+									<li><a href="xuanshou.html" target="_blank">俱乐部</a><span class="sr-only">(current)</span></li>
+		
+									<ul class="nav navbar-nav">
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+											 id="hh1">赛事
+												<span class="caret"></span></a>
+											<ul class="dropdown-menu" style="display:none;" id="caidan1">
+												<li><a href="https://lpl.qq.com/" target="_blank">LPL</a></li>
+												<li><a href="http://s.163.com/special/wcs2016cn/" target="_blank">WCS</a></li>
+												<li><a href="http://gleague.gamefy.cn/live.php" target="_blank">G联赛</a></li>
+												<li role="separator" class="divider" target="_blank"></li>
+												<li><a href="pvp.qq.com/webplat/info/news_version3/15592/22661/22664/25563/m14593/list_1.shtml
+												"
+													 target="_blank">KPL</a></li>
+											</ul>
+										</li>
+									</ul>
+									<li><a href="wenhua.html" target="_blank">文化</a></li>
+									<li><a href="women.html" target="_blank" class="navbar-right">关于我们</a>
+								</ul>
+							</div><!-- /.navbar-collapse -->
+		<script type="text/javascript" charset="utf-8">
+			function a1() {
+				window.open("game.html", "_blank");
+			}
+			
+		</script>
+	
+					<span class="navbar-right">
+						<span class="top-social-info ">
+							<a href="#" data-toggle="tooltip" data-placement="top" title="QQ" style="position: relative;right: 300%; color: #ccc;"><i
+								 class="fa fa-qq" aria-hidden="true"></i></a>
+							<a href="#" data-toggle="tooltip" data-placement="top" title="微信" style="position: relative;right: 250%;color: #ccc; "><i
+								 class="fa fa-weixin" aria-hidden="true"></i></a>
+							<a href="#" data-toggle="tooltip" data-placement="top" title="微博" style="position: relative;right: 200%;color: #ccc;"><i
+								 class="fa fa-weibo" aria-hidden="true"></i></a>
+							<a href="#" data-toggle="tooltip" data-placement="top" title="Facebook" style="position: relative;right: 150%;color: #ccc;"><i
+								 class="fa fa-facebook" aria-hidden="true"></i></a>
+							<a href="#" data-toggle="tooltip" data-placement="top" title="Twitter" style="position: relative;right: 100%;color: #ccc;"><i
+								 class="fa fa-twitter" aria-hidden="true"></i></a>
+						</span>
+	
+					</span>
+				</nav>
+			</div>
+	
+	<script  type="text/javascript" charset="utf-8">
+		
+		$(document).ready(function(){
+	        $('#hh').hover(function() {
+	            $("#caidan").css('display', 'block');
+	        }, function() {
+	           $("#caidan").css('display', 'none');
+	        });
+	
+	        $("#caidan").hover(function() {
+	           $(this).css('display', 'block');;
+	        }, function() {
+	           $(this).css('display', 'none');
+	        });
+	 })
+		$(document).ready(function(){
+		       $('#hh1').hover(function() {
+		           $("#caidan1").css('display', 'block');
+		       }, function() {
+		          $("#caidan1").css('display', 'none');
+		       });
+		
+		       $("#caidan1").hover(function() {
+		          $(this).css('display', 'block');;
+		       }, function() {
+		          $(this).css('display', 'none');
+		       });
+		})
+		
+		
+		
+	</script>
+		
+		<div    style="height: 100px;">
+			<div class="row"  >
+				<div class="col-md-1 col-sm-1 "></div>
+				<div class="col-md-5 col-sm-5  col-xs-12">
+					<h3>游戏介绍<span class="label label-default">one</span></h3>
+				</div>
+				<div class="col-md-6  col-sm-6">
+					
+				</div>
+			</div>
+			</div>
+		
+		
+		
+		
+		
+		
+		
+		<div  style="height: 800px;">
+			
+			
+			<div class="row">
+				
+				<div class="col-md-1">
+			</div>
+			
+			
+			
+			
+			<div class="col-md-10 col-sm-10 col-xs-12">
+				<div class="row" >
+					<div class="col-md-4 col-sm-4 col-xs-12">
+					
+  <div id="container">
+  	 <div class="thumbnail" style="height: 400px; 	overflow: scroll; overflow-x:hidden;" >
+      <img src="img/bg-img/LOL (2).jpg" alt="英雄联盟电竞海报">
+      <div class="caption" >
+        <h3 style="color: #E90550">英雄联盟</h3>
+        <p style="text-indent:2em">	<b>《英雄联盟》(LOL)可谓是家喻户晓，有海量风格各异的英雄，丰富、便捷的物品合成系统，游戏内置的匹配、排行和竞技系统，独创的“召唤师”系统及技能、符文、天赋等系统组合。</b></p>
+		<p style="text-indent:2em"><b> 《英雄联盟》除了联动各赛区发展职业联赛、打造电竞体系之外，每年还会举办“季中冠军赛”“全球总决赛”“All Star全明星赛”三大世界级赛事，获得了亿万玩家的喜爱，形成了自己独有的电子竞技文化。</b></p>
+		<p style="text-indent:2em"><b> 《英雄联盟》应为电竞之首，有“季中冠军赛”“全球总决赛”“All Star全明星赛”三大世界级赛事，这三大赛事尤受世界青年们所喜爱，每当决赛之夜，五邑大学男生宿舍区都会掀起呐喊的热潮。</b></p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+      </div>
+    </div>
+  
+  </div>
+   
+
+</div>
+					<div class="col-md-4 col-sm-4 col-xs-12" >
+						 <div id="container">
+							 <div class="thumbnail" style="height: 400px;overflow: scroll; overflow-x:hidden;" >
+						    <img src="img/bg-img/吃鸡2.jpg" alt="绝地求生宣传海报">
+						    <div class="caption">
+						      <h3 style="color: #D0D91D">绝地求生</h3>
+								<p style="text-indent:2em">	<b>《绝地求生》(PUBG) 是一款战术竞技型射击类沙盒游戏，玩家需要在游戏地图上收集各种资源，并在不断缩小的安全区域内对抗其他玩家，让自己生存到最后。</b></p>
+								<p style="text-indent:2em">	<b> 《绝地求生》除获得G-STAR最高奖项总统奖以及其他五项大奖，还打破了7项吉尼斯纪录。</b></p>
+								<p style="text-indent:2em">	<b> 《绝地求生》有NPL和PKL两大国际赛事，两大赛事异常激烈和精彩，也是电竞顶级赛事之二。</b></p>
+								<p style="text-indent:2em">	<b> 值得一说的是，《绝地求生》暂时没有国服，在2018年腾讯曾宣称出国服，但因未通过国家同意而不了了之。</b></p>
+<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+						    </div>
+						  </div>
+						
+						</div>
+						
+					</div>
+					<div   class="col-md-4 col-sm-4 col-xs-12">
+						
+						 <div id="container">
+							 <div class="thumbnail" style="height: 400px ;overflow: scroll; overflow-x:hidden;">
+						    <img src="img/bg-img/DOTA2.jpg" alt="dota2赛季海报">
+						    <div class="caption">
+						      <h3 style="color: #C3C3C3">Dota2</h3>
+						      <p style="text-indent:2em"><b>《刀塔2》完整继承了原作《DotA》一百多位的英雄，并脱离了上一代作品《DOTA》所依赖的《魔兽争霸Ⅲ》引擎的多人即时对战游戏，《刀塔2》的世界由天辉和夜魇两个阵营所辖区域组成，有上、中、下三条主要的作战道路相连接，中间以河流为界。每个阵营分别由五位玩家所扮演的英雄担任守护者，他们将以守护己方远古遗迹并摧毁敌方远古遗迹为使命，通过提升等级、赚取金钱、购买装备和击杀敌方英雄等手段达成胜利。</b></p>
+								<p style="text-indent:2em"><b>《刀塔2》有i联赛（imbatv）、G联赛、超新星公开赛 、ISS中国网吧超级赛、梦幻联赛、DOTA2国际邀请赛世界级赛事。而梦幻联赛S11在3月火热的进行中。有DOTA2实为电竞事业之幸。</b></p>
+						    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+						    </div>
+						  </div>
+						
+						</div>
+						 
+			
+					</div>
+				</div>
+				
+				  
+				<div class="row"  style="height: 400px;">
+					<div  class="col-md-4 col-sm-4 col-xs-12">
+						 <div id="container">
+							 <div class="thumbnail" style="height:400px;overflow: scroll; overflow-x:hidden;">
+						    <img src="img/bg-img/王者2.jpg" alt="王者荣耀">
+						    <div class="caption">
+						      <h3 style="color: #EEE70B">王者荣耀</h3>
+						      <p style="text-indent:2em"><b>《王者荣耀》是腾讯天美工作室推出的英雄竞技手游，不是一个人的王者，而是团队的荣耀！5v5王者峡谷PVP对战，领略英雄竞技的酣畅淋漓！更有边境突围、五军对决等丰富的游戏模式，体验突破传统、英雄竞技新形态！</b></p>
+								<p style="text-indent:2em"><b>《王者荣耀》，可谓是手游现代的巅峰之作，号称最公平的5V5手游，是现代中国少年的最爱游戏之一。</b></p>
+							<p style="text-indent:2em"><b>王者荣耀职业联赛（简称KPL）是官方最高规格专业晋级赛事。全年分别为春季赛和秋季赛两个赛季，每个赛季分为常规赛、季后赛及总决赛三部分。这算得上是国内最大的电竞赛事之一。可以说，王者荣耀的电竞之路越走越远，越做越好，这是《刺激战场》所无法媲美的地方。</b></p>
+						     <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+						    </div>
+						  </div>
+						
+						</div>
+				
+					</div>
+					<div    class="col-md-4 col-sm-4 col-xs-12">
+						 <div id="container">
+							 <div class="thumbnail" style="height: 400px;overflow: scroll; overflow-x:hidden;">
+						    <img src="img/bg-img/CF (2).jpg" alt="cf">
+						    <div class="caption">
+						      <h3>穿越火线</h3>
+						      <p style="text-indent:2em"><b>《穿越火线》,300万人同时在线,三亿鼠标的枪战梦想.《穿越火线》追求的不仅仅是开枪的爽快感,而是来自相互合作及默契带来的战略意义.最新活动尽在CF官方网站.</b></p>
+							<p style="text-indent:2em"><b>《穿越火线》在多国运营，有美服 越服 国服 韩服 等一系列列国家，可谓是多国同游。</b></p>
+							<p style="text-indent:2em"><b>《穿越火线》的CFS和TGA两个电竞赛事，燃爆中国。</b></p>
+								<p style="text-indent:2em"><b>值得一说的是，《穿越火线》估计是最大的圈钱游戏了，一把V枪动不动就888，实在令大学生玩家所苦恼。</b></p>
+								
+								
+						      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+						    </div>
+						  </div>
+						
+						</div>
+						 
+						
+						
+						
+						
+					</div>
+					<div   class="col-md-4 col-sm-4 col-xs-12">
+						 <div id="container">
+							 <div class="thumbnail" style="height: 400px;	overflow: scroll; overflow-x:hidden;">
+						    <img src="img/bg-img/星际2.jpg" alt="星际争霸">
+						    <div class="caption">
+						      <h3>星际争霸2</h3>
+						      <p style="text-indent:2em"><b>《星际争霸Ⅱ》剧情上延续了《星际争霸》初代作品的剧情和世界观，保留了一些《星际争霸》的兵种与建筑，同时一些兵种被赋予了新的技能，一些兵种被淘汰或代替了。旧有兵种、升级兵种以及全新的兵种一一登场，为了各自种族的生存，展开搏杀，战火烧遍整个星系。</b></p>
+						      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+						    </div>
+						  </div>
+						
+						</div>
+			
+					</div>
+				</div>
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			
+			<div class="col-md-1 col-sm-1 ">
+				
+			</div>
+		
+			
+		</div>
+	</div>
+		
+		<div class="row">
+			<div class="col-md-5 col-sm-4">
+				
+			</div>
+			<div class="col-md-2 col-sm-4 col-xs-12">
+				
+				<nav aria-label="Page navigation" >
+  <ul class="pagination  pagination-lg">
+    <li  class="disabled">
+      <a href="#" aria-label="Previous" >
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li  ><a style="background: #337AB7; color: #040505;" href="#">1<span class="sr-only">(current)</span></a></li>
+    <li><a href="#">2</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+			
+			</div>
+			<div class="col-md-5 col-sm-4">
+				
+			</div>
+			
+		</div>
+		
+		
+	<div    style="height: 100px;">
+		<div class="row"  >
+			<div class="col-md-1 col-sm-1 "></div>
+			<div class="col-md-5 col-sm-5  col-xs-12">
+				<h3>游戏公司<span class="label label-default">two</span></h3>
+			</div>
+			<div class="col-md-6  col-sm-6">
+				
+			</div>
+		</div>
+		</div>
+		
+		<div class="row">
+			
+			
+			<div class="col-md-8">
+				
+				<div class="col-md-2">
+			</div>
+			
+			<div  class="col-md-10"  style="font-style: normal;">
+			<div class="row"   style="height: 310px;overflow: hidden;">
+						
+		<ul class="media-list"  >
+  <li class="media" style="border: 1px solid blue">
+    <div class="media-body">
+      <a href="#">
+        <img class="media-object" style="height: 200px;width: 200x;margin-top: 40px;" src="img/bg-img/腾讯.jpg" alt="腾讯logo" >
+      </a>
+    </div>
+    <div class="media-body">
+      <h2 class="media-heading" style="color: #EB2854; text-align: center">腾讯游戏</h4>
+		
+      <p style="text-indent:2em;overflow: hidden;font-size: 16px;"><b><i>腾讯游戏是腾讯四大网络平台之一，是全球领先的游戏开发和运营机构，也是国内最大的网络游戏社区。无论是腾讯公司整体的在线生活模式布局，还是腾讯游戏的产品布局，都是从用户的最基本需求、最简单应用入手，注重产品的可持续发展和长久生命力，打造绿色健康的精品游戏。在开放性的发展模式下，腾讯游戏采取内部自主研发和多元化的外部合作两者结合的方式，已经在网络游戏的多个细分市场领域形成专业化布局并取得良好的市场业绩。</b></i></p>
+	  <p style="text-indent:2em;overflow: hidden;font-size: 16px;"><i><b>腾讯游戏可以说是独占鳌头，在手游上《王者荣耀》和《绝地求生》有着非常大的市场占有率，而PC端游上《英雄联盟》等游戏也是火在这个时代。</b></i></p>
+	  <p style="text-indent:2em ;overflow: hidden;font-size: 16px;"><i><b>腾讯游戏一直以 “用心创造快乐”为口号，但网友戏称“没钱玩你XX”，但近期腾讯游戏真是越来越'良心'，推出一些不氪金的游戏。</b></i></p>
+    </div>
+  </li>
+</ul>
+</div>
+
+	<div class="row"   style="height: 210px;overflow: hidden;">
+							
+			<ul class="media-list">
+	  <li class="media" style="border: 1px solid blue">
+	    <div class="media-body">
+	        <img class="media-object" src="img/bg-img/网易.jpg" alt="网易LOGO" style="width: 200x;margin-top: 20px;">
+	    </div>
+	    <div class="media-body">
+	      <h2 class="media-heading" style="color: #EB2854; text-align: center">网易游戏</h4>
+	      <p style="text-indent:2em;font-size: 16px;"><b><i>网易在线游戏自主研发运营多款在线游戏，包括《大话西游Ⅱ》、《梦幻西游2》、《新大话西游3》、《武魂》、《天下3》、《大唐无双2》、《倩女幽魂2》、《新飞飞》等。此外，网易还具有《魔兽世界》、《星际争霸Ⅱ》、《魔兽争霸Ⅲ:混乱之治》、《魔兽争霸Ⅲ:冰封王座》在中国大陆的独家运营权。网易游戏,在中国MMORPG游戏市场保持领先地位。</i></b>  </p>
+			 <p style="text-indent:2em;font-size: 16px;"><b><i>网易也是非常牛逼的一个公司，当年在游戏占有率可是和腾讯势均力敌的，现在的《第五人格》也贼牛逼。</i></b></p>
+	    </div>
+	  </li>
+	</ul>
+</div>
+
+
+<div class="row"  style="height: 200px;overflow: hidden;">
+						
+		<ul class="media-list">
+  <li class="media" style="border: 1px solid blue">
+    <div class="media-body media-right">
+      <a href="#">
+        <img class="media-object" src="img/bg-img/steam.jpg" alt="Steam" style="height: 160px;">
+      </a>
+    </div>
+    <div class="media-body">
+      <h2 class="media-heading" style="color: #EB2854; text-align: center">Steam</h2>
+      <p style="text-indent:2em;font-size: 16px;"><b><i>Steam平台是一款目前全球较大的综合性数字游戏软件发行平台。玩家可以在该平台购买游戏、软件、下载、讨论、上传、分享。</i></b></p>
+	  <p style="text-indent:2em;font-size: 16px;"><b><i>Steam宣称是畅玩游戏、讨论游戏、创造游戏的终极目的地</i></b></p>
+	  <p style="text-indent:2em;font-size: 16px;"><b><i>流行的PC游戏，无论是半条命系列或是使命召唤系列这样的大作，还是植物大战僵尸这样的休闲小游戏，都可以在STEAM上购买到。</i></b></p>
+		
+		
+    </div>
+  </li>
+</ul>
+</div>
+
+
+
+<div class="row"   style="height: 200px;overflow: hidden;">
+						
+		<ul class="media-list">
+  <li class="media"   style="border: 1px solid blue">
+    <div class=" media-body">
+      <a href="#">
+        <img class="media-object  img-rounded" src="img/bg-img/ibox.jpg" alt="..."  style="height: 160px;width: 200px;">
+      </a>
+    </div>
+    <div class="media-body">
+      <h2 class="media-heading"  style="color: #EB2854; text-align: center">ibox</h2>
+       <p style="text-indent:2em;font-size: 16px;"><b><i>ibox游戏共享平台是广州市新线网络科技有限公司运行的游戏平台。</i></b></p>
+      <p style="text-indent:2em;font-size: 16px;"><b><i>支持了时下的流行游戏，使您能与其它ibox用户随时进行联机对战，而且不受广告的干扰，尽享游戏对战的乐趣！</i></b></p>
+    </div>
+  </li>
+</ul>
+
+</div>
+
+
+
+
+
+</div>
+
+
+<div   class="col-md-1"></div>
+	</div>		
+		
+		<div class="col-md-3">
+			
+			<div class="row">
+				
+				<div class="col-md-12 col-sm-12  col-xs-12" style="height:100px">
+					<h3>MOBA游戏攻略<span class="label label-default">three</span></h3>
+				</div>
+				
+					
+				</div>
+			
+			
+			
+			
+		<div class="row">
+			
+
+
+<div class="panel panel-default  panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">坦克</h3>
+	 
+  </div>
+	 <p style="text-indent:2em"><b>坦克（Tank），又称肉盾，属于防御类英雄，该类英雄通常具备生命值高、防御力强等特点，坦克类英雄在对战游戏中以吸收伤害，保护友军的英雄为主，一般以出防御装为主。</b></p>
+  <div class="panel-body">
+    
+  </div>
+</div>
+			
+	<div class="panel panel-default  panel-success">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">刺客</h3>
+	  </div>
+	  <div class="panel-body">
+	    <p style="text-indent:2em"><b>属于高爆发、收割类英雄，此类英雄的特色是，前期发育，支援收割，后期切后排，秒脆皮英雄，刺客类英雄以出攻击装为主，团战时以偷袭和收割为主，刺客自身的防御较低，团战时应尽量避免被控制和集火攻击。</b></p>
+	  </div>
+	</div>		
+			
+		<div class="panel panel-default  panel-info">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">法师</h3>
+		  </div>
+		  <div class="panel-body">
+		 <b>属于魔法伤害类英雄，法师类英雄分高爆发、突进和团控等，出装以法术武器为主，法师的防御和生命值偏低，属于脆皮英雄，在团战时，站位以后排为主，突进类法师英雄以收割为主。
+		  </div>
+		</div>	
+			
+			<div class="panel panel-default  panel-warning">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">辅助</h3>
+			  </div>
+			  <div class="panel-body">
+			   <b>属于保护性英雄，一般与射手类英雄一路，辅助类英雄的技能以保护队友为主，属于增益性技能，团战时可充当肉盾吸收伤害，还可以为队友提供属性。
+			  </div>
+			</div>
+			
+			<div class="panel panel-default  panel-danger">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">射手</h3>
+			  </div>
+			  <div class="panel-body">
+			    <b>俗称ADC，英雄多为远程物理输出为主，远程英雄比较容易利用射程优势安全的输出，在整个团队担任重要的物理输出位置，射手类英雄的特点是输出伤害高，生命值低，防御低、属于脆皮类英雄，在团战中容易被敌方英雄集火先秒杀，或偷袭秒杀。
+			  </div>
+			</div>
+			
+			
+		</div>
+			
+			
+			
+			
+			
+			<div class="row">
+				
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         边路
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+1、学会根据场上局势进行换线 2、掌握主流边路英雄的大招CD 3、一级出门不要点技能
+<br>4、借助小件装备来抗压5、不要头铁，该放塔时就放塔<br>
+6、时刻保持紧张的状态7、边路对线思路
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          野区
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+打野位当然不是一味地埋头打野了，最重要的是要知道什么时机去抓人并且可以将对方抓死，并且要尽量保持自己的经济处于团队领先地位。
+打野是来带动团队节奏，所以我们要明白如何使用野区来发育自己，打野首先要控制自己的野区，开局当然是选择适合自己的buff，审视各路的兵线情况，对于压线过前的可以上去骚扰一波，耗掉对方一定的血量，缓解己方线上的压力。
+打野位置建议经济从野区和敌方英雄上获得，少从线上获取(但是对于入塔的小兵可以收掉)，这样可以使全队的经济不至于太过于集中，有利于团队的整体发展
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+         中单
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+中单是仅次于打野的第二重要角色。与之相比，另一个核心输出射手则更像是锦上添花。一局排位中可以没有射手，但绝不能没有法师。一个是因为法抗装比较少，另一个是因为法师在前期就可以通过自身的优势帮助打野开团收人。<br>打法<br>1、开局帮打野<br>2、中期主消耗<br>3、后期保射手
+      </div>
+    </div>
+  </div>
+</div>
+				
+				
+				
+				
+				
+			</div>
+			
+			
+		</div>
+		
+	
+		
+</div>
+
+<div class="row">
+				<div class="col-md-1 col-sm-1">
+					
+				</div>
+				<div class="col-md-11 col-sm-11  col-xs-12" style="height:100px">
+					<h3>知识小卡片<span class="label label-default">four</span></h3>
+				</div>
+				
+					
+				</div>
+	<!-- 16:9 aspect ratio -->
+	<div class="row">
+		<div class="col-md-1 col-xs-1">	
+		</div>
+		<div class="col-sm-10 col-md-10">
+			<div class="panel panel-default">
+  <div class="panel-body">
+   <div class="content">
+     <a class="card" href="#!">
+       <div class="front" style="background-image: url(img/core-img/95857a3eda5a119c7f415d7c4fe01374.jpg);">
+         <p>大年大吉，晚上吃鸡！</p>
+       </div>
+       <div class="back">
+         <div>
+           <h3>绝地求生！小知识，你知道吗？</h3>
+			 <div style="color: #EF4E3C">
+           <p>过路费/打劫(指打死路过你附近的敌人拿走他的遗产)。</p><p>落地成盒(指落地就死了，盒就是死亡后尸体附近会留下一个木盒里面装死者遗产).</p><p>送快递(就是你跑到敌人脸上被人轻易的打死变成了盒盒).</p><p>打野(跳伞跳到一些物资点松散不常有人去的地方，有的打野点资源还是很厚的比如某个雷达站)</p><p>毕业(类似于dnf中装备毕业，可以打架了)。</p><p>拉枪线(双方遭遇并互有掩体僵持时需要一名队(pao)友(hui)跑位拉枪线，敌人攻击队(pao)友(hui)时找出破绽击杀敌人。</p>
+				 <button class="button">Click Here</button>
+				 </div>
+         </div>
+       </div></a><a class="card" href="#!">
+       <div class="front" style="background-image: url(img/core-img/b65236a8c6320fdd41e2081cd6da1cc6.jpg);">
+         <p>德玛西亚！</p>
+       </div>
+       <div class="back">
+         <div>
+			 <h3 style="text-align:center">英雄联盟小知识</h3>
+			 <div style="color: #E95A31">
+			<p>T：指Tank，肉盾，护甲高，血量多，能够承受大量伤害的英雄
+
+			</p><p>DPS：damage per second，伤害每秒，特指能够对敌人造成大量伤害的英雄。
+
+			</p><p>AD：是指以物理伤害为主的一类英雄。
+			 
+			</p><p>AP：是指以法系伤害为主的一类英雄。
+			 
+			</p><p>Carry：后期，核心，需要大量的金钱去堆积装备的英雄，成型后威力很大，起决定性作用。如（ADC、APC）
+
+			</p><p>Jungling：打野
+
+			</p><p>Solo：一条线路上一个人，指英雄单独处于一路兵线上与敌人对峙，经验高升级速度远超其他两路。
+
+			</p><p>buff：自己或者友方英雄身上的增益性魔法效果 </p>
+				 </div>
+           <button class="button">Click Here</button>
+         </div>
+       </div></a><a class="card" href="#!">
+       <div class="front" style="background-image: url(img/bg-img/do.jpg);">
+         <p>白昼行将，暗夜魔王。</p>
+       </div>
+       <div class="back">
+         <div>
+			 <div style="color: #EB0C3F">
+			 	<h3>Dota2</h3>
+           　 <p>1号位
+　　				——主Carry，大哥级人物，通常都是后期，负责打到后期挑大梁的人。
+　　			</p><p>2号位
+　　				——副C，因为成长、技能等原因拖到后期也不虚的这类英雄，中期有能力带动Gank节奏，带领队友跟对方打团战，从而达到保主C的目的。
+　	　		</p><p>3号位
+　　				——主Gank，一般情况下走中带动节奏，当然也有劣势路单的时候，这类英雄在线上一般比较强势，劣势路单也不会轻易被杀死，如巫妖，蝙蝠，风行等。
+　		　  </p><p> 4号位
+　　				——4号位一般是副gank，多是团控英雄， 一般神牛/抄袭/谜团/蓝胖等都可以打4号位。4号位的英雄基本前期会放弃等级，在线上会配合5号位的人进行多线游走。或者保护主C
+　			</p><p> 5号位
+			 ——5号位是纯辅助，负责鸡鸟眼，后期几乎无作战能力。常见的有VS/冰女等。</p>
+				 </div>
+             <button class="button">Click Here</button>
+         </div>
+		   
+       </div></a><a class="card" href="#!">
+       <div class="front" style="background-image: url(img/core-img/4ce50f2ee5bf563067f54eb226f05292.jpg);">
+         <p>花木兰——极致燃烧的狩魂，挥舞屠龙之刃</p>
+       </div>
+       <div class="back">
+         <div>
+			 <h3>王者荣耀</h3>
+			 <div style="color: #E81142">
+			<p>霸体，支配，压制：
+			霸体一般在使用技能时触发，不能被控制，比如花木兰廉颇等。张良大招支配依然是控制，霸体状态一边被张良大一边还能打，但是东皇太一的压制就比控制更强。
+			</p><p>	暴击率和暴击效果：   简单来说，暴击率高代表越可能出暴击，暴击效果越高暴击出来的伤害越高。没有打出暴击肯定就没有暴击伤害了。
+			</p><p>硬控，软控:
+			硬控是被控制时身体不受控制，软控是行动或释放技能稍微受到阻碍。硬控像白起的嘲讽，妲己眩晕，达摩击退，牛魔击飞，以及召唤师技能晕眩。软控比如大多数英雄都有的减速，亚瑟大乔孙膑司马懿的沉默，以及召唤师技能弱化和寒冰惩击。Tips:敌人贴近弱化时净化可以解除弱化效果哦。</p>
+			 </div>
+           <button class="button">Click Here</button>
+         </div>
+       </div></a><a class="card" href="#!">
+       <div class="front" style="background-image: url(img/core-img/64f995e7ce7f5653f38e21baa14c5df2.jpg);">
+			 <p>Double kill（双杀）
+			<br>Multi kill（大杀特杀）
+			<br>Ultra kill（忽然杀！）
+			<br>Unbreakable（牢不可破！）
+			<br>Bring it on!（秀一个吧）</p>
+       </div>
+       <div class="back">
+         <div>
+			 <h3>穿越火线</h3>
+			 <div style="color: #E0076A">
+           <p>卡楼梯：位于黑色城镇警家连A大的下坡处上有一个横扛，由于往横杠上打子弹可以穿到A大，控制的好甚至会爆掉，严重影响T进攻，所以比赛和野战卡楼梯或被骂或者踢掉。</p>
+           <p>　大炮：其实就是CF中威风凛凛的巴雷特MA821狙击步枪，它在CF中的威力可说是要多大有多大.大炮主要是用于防守和压制枪法比较牛的敌人，不建议冲锋。</p>
+			 <p>CF幽灵鬼跳，就是在潜伏者移动的情况下，让保卫者也看不到的一种技巧。鬼跳分1-5代，难度依次增加，保卫者看到的也越来越透明.</p>
+				 </div>
+           <button class="button">Click Here</button>
+         </div>
+       </div></a><a class="card" href="#!">
+       <div class="front" style="background-image: url(img/bg-img/争霸.jpg);">
+					 <p>虫群摧毁了我们的家园，
+			<br>我高贵的族人沦为难民......
+			<br>但虫群无法摧毁我们的意志，
+			<br>因为神圣的卡拉，连接着我们每个人的思想，让我们在绝望中团结一致
+			<br>今天，我们要夺回我们的家园
+			<br>夺回
+			<br>我们的遗产! </p>
+       </div>
+       <div class="back">
+         <div>
+			 <h3>星际争霸</h3>
+			 <div style="color: #E70370">
+			<p>人族：机枪兵（纯爷们）——陆战队员
+			 </p><p>光头哥——劫掠者
+			</p><p>死神(台服译名）——收割者 
+			</p><p>火车——恶火 蓝火火车——升级射程后的恶火
+			</p><p>追猎——追猎者 闪烁追猎——升级了“闪烁”这一技能的追猎者
+			</p><p>烧饼——机械哨兵	
+			</p><p>虚空（菊花舰）——虚空辉光舰
+			</p><p>电兵——高阶圣堂武士 撒电——灵能风暴，高阶圣堂武士的一招技能。
+			</p><p>隐刀——黑暗圣堂武士
+			</p><p>白球——执政官</p>
+			 </div>
+           <button class="button">Click Here</button>
+         </div>
+       </div></a>
+   </div>
+  </div>
+</div>
+		</div>
+		
+	
+	</div>
+
+	<div class="row">
+					<div class="col-md-1 col-sm-1">
+						
+					</div>
+					<div class="col-md-11 col-sm-11  col-xs-12" style="height:100px">
+						<h3>RTS<span class="label label-default">five</span></h3>
+					</div>
+					
+						
+					</div>
+					
+					
+					
+					<div class="row">
+					<div class="container">
+					<div class="col-xs-6 col-md-3" style="height: 320px;">
+    <a href="#" class="thumbnail" style="text-decoration: none;height: 320px;background-color: antiquewhite">
+			<img  src="img/core-img/m2.jpg" >
+      资源<br />
+			即时战略游戏中的资源可能是黄金、矿石、木材、粮食甚至是残骸<br>
+			这些资源也就是用来生产建造的资金。<br>
+			所以玩家必须确保资源能够足量而且稳定的获得供应。
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-3"  style="height: 320px;background-color: antiquewhite">
+    <a href="#" class="thumbnail"  style="text-decoration: none;height: 320px;background-color: antiquewhite">
+      <img src="img/core-img/m3.jpg" alt="...">
+			单位操控
+			<br> 集中火力攻击敌方最薄弱的单位。
+<br> 适时的让受损单位暂时撤退。
+<br>时时注意自己的单位有无作出不利于战事的行为（例如盲目追赶）。
+<br>优先保存价值最高的单位。
+			
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-3"  style="height: 320px;background-color: antiquewhite">
+    <a href="#" class="thumbnail"  style="text-decoration: none;height: 320px;background-color: antiquewhite">
+      <img src="img/core-img/m4.jpg" alt="...">
+			地形与气候<br />
+			地形与气候在即时战略游戏中的影响与现实战争相较甚远（尤其是气候）。<br>地形在游戏中最直接的影响就是限制海、陆两个军种的移动能力。
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-3"  >
+    <a href="#" class="thumbnail"  style="text-decoration: none;height: 320px;background-color: antiquewhite">
+      <img src="img/core-img/m1.jpg" alt="...">
+			补给<br>
+			由于游戏中的单位普遍不需要持续的补充饮食或是燃油，所谓的补给代表的是兵力的补充。<br>一场战斗下来双方难免会有死伤，如何在战斗中持续生产单位并送上前线，就成了致胜的关键之一
+			
+    </a>
+  </div>
+</div>	
+					</div>
+  
+					
+					
+					
+	
+	
+	
+		<link rel="stylesheet" type="text/css" href="css/aboutStyle.css"/>
+		
+		<footer id="footer">
+		  <div class="container">
+		    <div class="row">
+		      <div class="col-sm-6">Copyright © 2019 All Rights Reserved.</div>
+		
+		    </div>
+		  </div>
+		</footer>
+			
+			
+			
+		<a class="glyphicon glyphicon-arrow-up"  id="goToTop"  style="background: #32383E;font-size: 25px;
+		color: #EDEDED;position: fixed;height: 30px; width: 30px ; right:30px;top: 500px; display: block;cursor:pointer;text-decoration:none">
+			
+		</a>
+		
+		
+		<script type="text/javascript">
+    $(document).ready(function(){
+        $("#goToTop").hide()//隐藏go to top按钮
+        $(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop()>1){//当window的scrolltop距离大于1时，go to top按钮淡出，反之淡入
+                    $("#goToTop").fadeIn();
+                } else {
+                    $("#goToTop").fadeOut();
+                }
+            });
+        });
+     
+
+        // 给go to top按钮一个点击事件
+        $("#goToTop").click(function(){
+            $("html,body").animate({scrollTop:0},600);//点击go to top按钮时，以800的速度回到顶部，这里的800可以根据你的需求修改
+            return false;
+        });
+    });
+	
+	
+	 $(function(){
+		    var banOffTop=$(".hx").offset().top;//获取到距离顶部的垂直距离
+		    var scTop=0;//初始化垂直滚动的距离
+		    $(document).scroll(function(){
+		        scTop=$(this).scrollTop();//获取到滚动条拉动的距离
+		        //console.log(scTop);查看滚动时，垂直方向上，滚动条滚动的距离
+		        if(scTop>=banOffTop){
+		        //核心部分：当滚动条拉动的距离大于等于导航栏距离顶部的距离时，添加指定的样式
+		            $(".hx").addClass("fixDiv");
+		        }else{
+		            $(".hx").removeClass("fixDiv");
+		        }
+		
+		    })
+		})
+	
+	
+</script>
+		
+			
+		
+		
+	
+	
+
+	</body>
+	
+</html>

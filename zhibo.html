@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>袂GAME|直播</title>
+		
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/bootstrap1.min.css">
+		<script src="js/jquery/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap1.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<script src="js/jquery_flexslider.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style1.css"/>
+			<script src="js/index1.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/style2.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset1.css"/>
+		
+		<style type="text/css">
+			.fixDiv{
+						 position:fixed;
+						 width: 100%;
+			  top: 0;
+			  z-index: 1;
+			}
+		</style>
+	</head>
+	
+	
+	<body style="overflow:-Scroll;overflow-x:hidden;width: 1520px;height: 900;">
+	
+	
+			<div class="container" style="height:120px">
+				<div class="row" style="height:20px"></div>
+				<div class="row" style="height:50px">
+	
+					<div class="container">
+						<div class="col-2  col-md-offset-9 col-sm-offset-9  col-xs-offset-5 ">
+							<input type="button" value="登录|注册" class="btn-block  btn-success btn-light btn-sm">
+						</div>
+	
+					</div>
+	
+	
+				</div>
+	
+				<div class="row">
+	
+					<div class="col-md-6  col-sm-6  col-xs-3 ">
+	
+						<div class="container  " style="font-size:large ;font-weight: bolder;font-style: italic ; color: #0BD6D2">
+							<a style="text-decoration:none;  color: #0BD6D2" class="lead">袂GAME</a>
+						</div>
+					</div>
+	
+	
+	
+					<div class="col-md-1 col-sm-1 col-xs-1"></div>
+	
+	
+	
+	
+					<div class="col-md-5 col-sm-5  col-xs-9">
+						<div class="container">
+							<div class="col-md-2 col-sm-2  col-xs-3 ">
+								<div class="dropdown" style="left:55%;  position: relative; ">
+									<button type="button" class="btn dropdown-toggle btn-info"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  id="one">
+										全部
+										<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu"  id="two1" >
+										<li role="presentation">
+											<a role="menuitem" tabindex="" href="game.html" target="_blank">游戏</a>
+										</li>
+										<li role="presentation">
+											<a role="menuitem" tabindex="" href="#">赛事</a>
+										</li>
+										<li role="presentation">
+											<a role="menuitem" tabindex="" href="xuanshou.html" target="_blank">选手</a>
+										</li>
+										<li role="presentation" class="divider"></li>
+										<li role="presentation">
+											<a role="menuitem" tabindex="" href="#">直播</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<script type="text/javascript" charset="utf-8">
+								$(document).ready(function(){
+								       $('#one').hover(function() {
+								           $("#two1").css('display', 'block');
+								       }, function() {
+								          $("#two1").css('display', 'none');
+								       });
+									
+								       $("#two1").hover(function() {
+								          $(this).css('display', 'block');;
+								       }, function() {
+								          $(this).css('display', 'none');
+								       });
+								})
+								
+								
+							</script>
+							
+							
+							
+							<div class="col-md-3 col-sm-3 col-xs-6">
+								<div class="input-group">
+									<input type="text" class="form-control  " id="exampleInputAmount" placeholder="Search">
+									<span class="input-group-btn" style="position:relative; top:-1px    ">
+										<button type="button" class="btn btn-default  glyphicon-search glyphicon"></button>
+									</span></div>
+							</div>
+	
+	
+						</div>
+	
+					</div>
+				</div>
+			</div>
+	
+	
+			<div style="height: 120px;" class="hx">
+						<nav class="navbar navbar-default  navbar-inverse " style="height: 120px;">
+							<div class="container-fluid  ">
+								<!-- Brand and toggle get grouped for better mobile display -->
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+									 aria-expanded="false">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+									<a class="navbar-brand" href="#">袂GAME</a>
+								</div>
+			
+								<!-- Collect the nav links, forms, and other content for toggling -->
+								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+									<ul class="nav navbar-nav">
+										<li><a href="index.html" target="_blank">主页<span class="sr-only">(current)</span></a></li>
+			
+										<li class="dropdown">
+											<a href="game.html" target="_blank" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true"
+											 aria-expanded="false" id="hh" onclick="a1()">游戏
+												<span class="caret"></span></a>
+											<ul class="dropdown-menu" style="display:none;" id="caidan">
+												<li><a href="https://www.dota2.com.cn/index.htm" target="_blank">DOTA2</a></li>
+												<li><a href="http://sc2.blizzard.cn/home/" target="_blank">星际争霸</a></li>
+												<li><a href="http://dz.blizzard.cn/" target="_blank">魔兽争霸</a></li>
+												<li><a href="https://lol.qq.com/" target="_blank">英雄联盟</a></li>
+												<li role="separator" class="divider" target="_blank"></li>
+												<li><a href="http://pubg.qq.com/main.shtml" target="_blank">绝地求生</a></li>
+												<li role="separator" class="divider"></li>
+												<li><a href="https://pvp.qq.com/" target="_blank">王者荣耀</a></li>
+											</ul>
+										</li>
+										<li class="active"><a href="zhibo.html" target="_blank">直播</a><span class="sr-only">(current)</span></li>
+										<li><a href="xuanshou.html#abc" target="_blank">选手</a><span class="sr-only">(current)</span></li>
+										<li><a href="xuanshou.html" target="_blank">俱乐部</a><span class="sr-only">(current)</span></li>
+			
+										<ul class="nav navbar-nav">
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+												 id="hh1">赛事
+													<span class="caret"></span></a>
+												<ul class="dropdown-menu" style="display:none;" id="caidan1">
+													<li><a href="https://lpl.qq.com/" target="_blank">LPL</a></li>
+													<li><a href="http://s.163.com/special/wcs2016cn/" target="_blank">WCS</a></li>
+													<li><a href="http://gleague.gamefy.cn/live.php" target="_blank">G联赛</a></li>
+													<li role="separator" class="divider" target="_blank"></li>
+													<li><a href="pvp.qq.com/webplat/info/news_version3/15592/22661/22664/25563/m14593/list_1.shtml
+													"
+														 target="_blank">KPL</a></li>
+												</ul>
+											</li>
+										</ul>
+										<li><a href="wenhua.html" target="_blank">文化</a></li>
+										<li><a href="women.html" target="_blank" class="navbar-right">关于我们</a>
+									</ul>
+								</div><!-- /.navbar-collapse -->
+			<script type="text/javascript" charset="utf-8">
+				function a1() {
+					window.open("game.html", "_blank");
+				}
+				
+			</script>
+	
+					<span class="navbar-right">
+						<span class="top-social-info ">
+							<a href="#" data-toggle="tooltip" data-placement="top" title="QQ" style="position: relative;right: 300%; color: #ccc;"><i
+								 class="fa fa-qq" aria-hidden="true"></i></a>
+							<a href="#" data-toggle="tooltip" data-placement="top" title="微信" style="position: relative;right: 250%;color: #ccc; "><i
+								 class="fa fa-weixin" aria-hidden="true"></i></a>
+							<a href="#" data-toggle="tooltip" data-placement="top" title="微博" style="position: relative;right: 200%;color: #ccc;"><i
+								 class="fa fa-weibo" aria-hidden="true"></i></a>
+							<a href="#" data-toggle="tooltip" data-placement="top" title="Facebook" style="position: relative;right: 150%;color: #ccc;"><i
+								 class="fa fa-facebook" aria-hidden="true"></i></a>
+							<a href="#" data-toggle="tooltip" data-placement="top" title="Twitter" style="position: relative;right: 100%;color: #ccc;"><i
+								 class="fa fa-twitter" aria-hidden="true"></i></a>
+						</span>
+	
+					</span>
+				</nav>
+			</div>
+	
+	<script  type="text/javascript" charset="utf-8">
+		
+		$(document).ready(function(){
+	        $('#hh').hover(function() {
+	            $("#caidan").css('display', 'block');
+	        }, function() {
+	           $("#caidan").css('display', 'none');
+	        });
+	
+	        $("#caidan").hover(function() {
+	           $(this).css('display', 'block');;
+	        }, function() {
+	           $(this).css('display', 'none');
+	        });
+	 })
+		$(document).ready(function(){
+		       $('#hh1').hover(function() {
+		           $("#caidan1").css('display', 'block');
+		       }, function() {
+		          $("#caidan1").css('display', 'none');
+		       });
+		
+		       $("#caidan1").hover(function() {
+		          $(this).css('display', 'block');;
+		       }, function() {
+		          $(this).css('display', 'none');
+		       });
+		})
+		
+		
+		
+	</script>
+		
+		 
+		<div class="row">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-10 col-sm-10 ">
+				<div class="page-header" style="font-size: 24px;color: white;">
+             <h2> <small>直播</small>平台</h2>
+           </div>
+			</div>
+			<div class="col-md-1">
+				
+			</div>
+		</div>
+		
+		<div class="row">
+					<div class="col-md-1 col-sm-1 col-xs-1">
+						
+					</div>
+					
+					<div class="col-md-10 col-sm-10 col-xs-10">
+						<div style="text-align:center;clear:both">
+						</div>
+						  <div class="cont s--inactive">
+						  <!-- cont inner start -->
+						  <div class="cont__inner">
+						    <!-- el start -->
+						    <div class="el">
+						      <div class="el__overflow">
+						        <div class="el__inner">
+						          <div class="el__bg"></div>
+						          <div class="el__preview-cont">
+						            <h1 class="el__heading" style="color: #E80206">虎牙直播</h2>
+						          </div>
+						          <div class="el__content" >
+						            <div class="el__text" style="color: #DC08E8">虎牙直播</div>
+									  <p style="text-indent:4em ;color: #E2D6D6 ;font-size: 2em"><b> 虎牙直播是以游戏直播为主的弹幕式互动直播平台，累计注册用户2亿，提供热门游戏直播、电竞赛事直播与游戏赛事直播，手游直播等。包含王者荣耀，绝地求生，荒野行动等游戏直播，lol、dota2、dnf等热门游戏直播以及单机游戏、手游等游戏直播</b></p>
+									   <p style="text-indent:4em ;color: #E2D6D6 ;font-size: 2em"><b> 虎牙直播独播许多电竞比赛 如：
+		虎牙将带来美洲职业联赛全程独家直播！
+		虎牙独播！PKL韩国PUBG职业联赛
+		虎牙独播2019LCK冠军联赛
+		虎牙独播2019LCK冠军联赛
+		虎牙独家直播的DOTA2 Winter Cup（冬季杯）</b></p>
+									  <p style="text-indent:4em ;color: #E2D6D6 ;font-size: 2em"><b> 虎牙直播可谓是游戏直播的一哥！</b></p>
+						            <div class="el__close-btn"></div>
+						          </div>
+						        </div>
+						      </div>
+						       <div class="el__index">
+						          <div class="el__index-back">1</div>
+						          <div class="el__index-front">
+						            <div class="el__index-overlay" data-index="1">1</div>
+						          </div>
+						        </div>
+						      </div>
+						    <!-- el end -->
+						    <!-- el start -->
+						    <div class="el">
+						      <div class="el__overflow">
+						        <div class="el__inner">
+						          <div class="el__bg"></div>
+						          <div class="el__preview-cont">
+						            <h2 class="el__heading" style="color: #E80206">斗鱼直播</h2>
+						          </div>
+						          <div class="el__content">
+						            <div class="el__text" style="color: #DC08E8">斗鱼直播</div>
+									  <p style="text-indent:4em ;color: #E2D6D6 ;font-size: 2em"><b>斗鱼 - 每个人的直播平台提供高清、快捷、流畅的视频直播和游戏赛事直播服务，包含英雄联盟lol直播、穿越火线cf直播、dota2直播、美女直播等各类热门游戏赛事直播和各种名家大神游戏直播，内容丰富，推送及时，带给你不一样的视听体验，一切尽在斗鱼 - 每个人的直播平台。</b></p>
+									  <p style="text-indent:4em ;color: #E2D6D6 ;font-size: 2em"><b>在斗鱼不仅可以看到电竞直播·游戏直播，而且还能看到各种美女帅哥搞笑主播，如曾经的斗鱼一哥卢本伟，斗鱼的六姐:冯提莫、陈一发、阿冷、周二珂、小缘、纳豆。</b></p>
+									  <p style="text-indent:4em ;color: #E2D6D6 ;font-size: 2em"><b>斗鱼在净网过程中大为出力，致力于清楚色情直播，斗鱼TV荣登2016中国泛娱乐指数盛典“中国文娱创新企业榜 TOP30”。</b></p>
+						            <div class="el__close-btn"></div>
+						          </div>
+						        </div>
+						      </div>
+						      <div class="el__index">
+						        <div class="el__index-back">2</div>
+						        <div class="el__index-front">
+						          <div class="el__index-overlay" data-index="2">2</div>
+						        </div>
+						      </div>
+						    </div>
+						    <!-- el end -->
+						    <!-- el start -->
+						    <div class="el">
+						      <div class="el__overflow">
+						        <div class="el__inner">
+						          <div class="el__bg"></div>
+						          <div class="el__preview-cont">
+						            <h2 class="el__heading" style="color: #E80206">触手直播</h2>
+						          </div>
+						          <div class="el__content">
+						            <div class="el__text" style="color: #DC08E8">触手直播</div>
+									  <p style="text-indent:4em ;color: #E2D6D6 ;font-size: 2em"><b>触手直播是一家游戏直播平台，以手游直播为核心，提供用户超清直播体验，更有明星和大神带你玩王者荣耀，球球大作战，我的世界，刺激战场，绝地求生，明日之后等热门单机游戏、手游。</b></p>
+									  <p style="text-indent:4em ;color: #E2D6D6 ;font-size: 2em"><b>触手独有的手机录屏直播技术 
+		已积累的大量手游视频资源、手游主播 
+		与大量手游开发商、手游联赛签约合作
+		</b></p>
+						            <div class="el__close-btn"></div>
+						          </div>
+						        </div>
+						      </div>
+						      <div class="el__index">
+						        <div class="el__index-back">3</div>
+						        <div class="el__index-front">
+						          <div class="el__index-overlay" data-index="3">3</div>
+						        </div>
+						      </div>
+						    </div>
+						    <!-- el end -->
+						    <!-- el start -->
+						    <div class="el">
+						      <div class="el__overflow">
+						        <div class="el__inner">
+						          <div class="el__bg"></div>
+						          <div class="el__preview-cont">
+						            <h2 class="el__heading" style="color: #E80206">企鹅电竞</h2>
+						          </div>
+						          <div class="el__content">
+						            <div class="el__text" style="color: #DC08E8">企鹅电竞</div>
+									  <p style="text-indent:4em ;color: #E2D6D6 ;font-size: 2em"><b>企鹅电竞-超越游戏快乐，腾讯游戏官方直播平台，包含绝地求生,王者荣耀,英雄联盟,主机单机,穿越火线,娱乐,刀塔自走棋,刺激战场,CF手游,地下城与勇士,休闲专区,二次元等热门游戏直播以及单机游戏、手游等游戏直播，热门赛事直播与游戏直播，热门手游直播尽在企鹅电竞</b></p>
+									  <p style="text-indent:4em ;color: #E2D6D6 ;font-size: 2em"><b>企鹅电竞是腾讯旗下的直播平台，嘿嘿！腾讯，你懂的。企鹅电竞有着你无法想象的直播资源和独播资源。</b></p>
+						            <div class="el__close-btn"></div>
+						          </div>
+						        </div>
+						      </div>
+						      <div class="el__index">
+						        <div class="el__index-back">4</div>
+						        <div class="el__index-front">
+						          <div class="el__index-overlay" data-index="4">4</div>
+						        </div>
+						      </div>
+						    </div>
+						    <!-- el end -->
+						    <!-- el start -->
+						    <div class="el">
+						      <div class="el__overflow">
+						        <div class="el__inner">
+						          <div class="el__bg"></div>
+						          <div class="el__preview-cont">
+						            <h2 class="el__heading" style="color: #E80206">熊猫直播</h2>
+						          </div>
+						          <div class="el__content">
+						            <div class="el__text" style="color: #DC08E8">熊猫直播</div>
+									  <p style="text-indent:4em ;color: #E2D6D6 ;font-size: 2em"><b>熊猫直播拥有高清、流畅的直播，活动、游戏赛事直播服务，包含英雄联盟lol直播，绝地求生直播，dota2直播等游戏直播，更有大型电竞赛事直播、美女直播、演唱会直播，精品视频直播，精彩直播尽在熊猫直播！</b></p>
+									  <p style="text-indent:4em ;color: #E2D6D6 ;font-size: 2em"><b>除了直播内容质量高，熊猫直播还有一个非常吸引小编的点就是"佛系"，因为熊猫直播的管理一直是比较严格的，游戏主播代打开挂或者某些女性主播卖rou之类的,在熊猫是不会发生的，这样一个健康和谐的直播环境，是大众需要的。而且大家发弹幕都很和谐，就算有不同的观点也不是破口大骂而是理性讨论。</b></p>
+									  <p style="text-indent:4em ;color: #E2D6D6 ;font-size: 2em"><b>最近熊猫直播不好过啊，王思聪撤资，熊猫举步维艰。</b></p>
+						            <div class="el__close-btn"></div>
+						          </div>
+						        </div>
+						      </div>
+						      <div class="el__index">
+						        <div class="el__index-back">5</div>
+						        <div class="el__index-front">
+						          <div class="el__index-overlay" data-index="5">5</div>
+						        </div>
+						      </div>
+						    </div>
+						    <!-- el end -->
+						  </div>
+						  <!-- cont inner end -->
+						</div>
+						
+					</div>
+					<script src="js/index1.js" type="text/javascript" charset="utf-8"></script>
+					
+					<div class="col-md-1 col-xs-1 col-sm-1">
+						
+					</div>
+					
+					
+					
+				</div>
+		
+			<div class="row">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-10 col-sm-10 ">
+				<div class="page-header" style="font-size: 24px;color: white;">
+		     <h2> <small>知名</small>主播</h2>
+		   </div>
+			</div>
+			<div class="col-md-1">
+				
+			</div>
+		</div>
+		
+		 <div class="controls">
+		     <button type="button" class=" btn btn-primary btn-lg " style="width: 10%; display: inline-block;" data-filter="all">主播</button>
+		     <button type="button" class="btn btn-success btn-lg "style="width: 10%;display: inline-block;" data-filter=".green">英雄联盟</button>
+		     <button type="button" class="btn btn-info btn-lg "style="width: 10%;display: inline-block;" data-filter=".blue">绝地求生</button>
+		     <button type="button" class="btn btn-warning btn-lg " style="width: 10%;display: inline-block;" data-filter=".pink">王者荣耀</button>
+		 
+		     <button type="button" class="control" data-sort="default:asc" style="position: relative;top: 20px;"></button>
+		     <button type="button" class="control" data-sort="default:desc"style="position: relative;top: 20px;"></button>
+		 </div>
+		
+		<div class="container1" data-ref="mixitup-container" style="">
+				    <div class="item green" data-ref="mixitup-target" style="background-color: antiquewhite">
+					<div style="margin-top: -170px;position: absolute" >
+						<img src="img/bg-img/厂长.jpeg" style="width: 100px;text-align:center;margin-left: 100px;margin-top: 10px;">
+						<h4 style="text-align: center ;font-size: 200em; ">厂长</h4>
+						<p style="text-indent:2em ;color: #E46D15 ;font-size: 120em; font-weight: 600; "><b>明凯，1993年7月25日出生于湖北武汉，游戏ID：Clearlove，中国《英雄联盟》电子竞技职业选手，EDG战队打野。</b></p>
+						<p style="text-indent:2em ;color: #E46D15 ;font-size: 120em; font-weight: 600; "><b>厂长曾在虎牙直播，现在在企鹅电竞直播。不定期开播(大佬)。</b></p>
+						</div>
+					</div>
+				    <div class="item green" data-ref="mixitup-target" style="background-color: antiquewhite">
+						<div style="margin-top: -170px;position: absolute">
+						<img src="img/bg-img/陆雪琪.jpg" style="width: 100px;text-align:center;margin-left: 100px;margin-top: 10px;">
+						<h4 style="text-align: center ;font-size: 200em; ">陆雪琪</h4>
+						<p style="text-indent:2em ;color: #E46D15 ;font-size: 120em; font-weight: 600; "><b>陆雪琪，虎牙直播签约主播，直播风格亲切自然，线上操作犀利，声音呆萌。陆雪琪擅长英雄：皇子、女刀、卢锡安、莫甘娜。打进过国服艾欧尼亚前30名的妹子。明明可以靠脸吃饭，她直播风格亲切自然，线上操作犀利，声音呆萌，让诸多粉丝不能自拔。</b></p>
+						</div>
+					</div>
+				    <div class="item blue" data-ref="mixitup-target" style="background-color: antiquewhite">
+						<div style="margin-top: -170px;position: absolute">
+						<img src="img/bg-img/XDD小叮当.jpg" style="width: 100px;text-align:center;margin-left: 100px;margin-top: 10px;">
+						<h4 style="text-align: center ;font-size: 200em; ">XDD小叮当</h4>
+						<p style="text-indent:2em ;color: #E46D15 ;font-size: 120em; font-weight: 600; "><b>他是前皇族（Royal）OW分部、现IG绝地求生分部职业选手。职业生涯主要分为两部分，守望先锋和绝地求生。</b></p>
+						<p style="text-indent:2em ;color: #E46D15 ;font-size: 120em; font-weight: 600; "><b>现在在虎牙直播。</b></p>
+						</div>
+					</div>
+				    <div class="item pink" data-ref="mixitup-target" style="background-color: antiquewhite">
+					<div style="margin-top: -170px;position: absolute">
+						<img src="img/bg-img/梦泪.jpg" style="width: 100px;text-align:center;margin-left: 100px;margin-top: 10px;">
+						<h4 style="text-align: center ;font-size: 200em; ">梦泪</h4>
+						<p style="text-indent:2em ;color: #E46D15 ;font-size: 120em; font-weight: 600; "><b>梦泪（名字：肖闽辉），游戏id：梦之泪伤，现《王者荣耀》电子竞技职业选手，AG超玩会打野；作为AG超玩会队员，擅长英雄：露娜、韩信 、李白、阿轲   ，两届KPL联赛票选最受欢迎选手  ，梦泪出众的个人实力在职业联赛上可谓圈粉无数。</b></p>
+						</div>
+					</div>
+				    <div class="item green" data-ref="mixitup-target" style="background-color: antiquewhite">
+						<div style="margin-top: -170px;position: absolute">
+						<img src="img/bg-img/骚男.jpg" style="width: 100px;text-align:center;margin-left: 100px;margin-top: 10px;">
+						<h4 style="text-align: center ;font-size: 200em; ">骚男</h4>
+						<p style="text-indent:2em ;color: #E46D15 ;font-size: 120em; font-weight: 600; "><b>这位主播的是近年来迅速蹿红的。当他用“痛痛痛”喊出亚索的配音时，很多人可能觉得羞耻，但是也正因为如此不少人喜欢这个比 较“逗”的主播。而他的男刀和亚索确实还不错。</b></p>
+						<p style="text-indent:2em ;color: #E46D15 ;font-size: 120em; font-weight: 600; "><b>骚男现在在虎牙直播。</b></p>
+						</div></div>
+					<div class="item pink" data-ref="mixitup-target" style="background-color: antiquewhite">
+					<div style="margin-top: -170px;position: absolute">
+						<img src="img/bg-img/耀神.jpeg" style="width: 90px;text-align:center;margin-left: 100px;margin-top: 10px;">
+						<h4 style="text-align: center ;font-size: 200em; ">耀神</h4>
+						<p style="text-indent:2em ;color: #E46D15 ;font-size: 120em; font-weight: 600; ">大家都觉得耀神特别可爱，长得也很是清秀，萌萌的。王者荣耀里有一百种死法，耀神至少会一半。打游戏也是非常厉害，直播间挂着第一李白的称号，抖音里也很火，很搞笑，也不说脏话，人气最近一直飙升。<b></b></p>
+						
+					</div>	
+					</div>
+				    <div class="item blue" data-ref="mixitup-target" style="background-color: antiquewhite">
+						<div style="margin-top: -170px;position: absolute">
+						<img src="img/bg-img/雪MM.jpg" style="width: 70px;text-align:center;margin-left: 120px;margin-top: 10px;">
+						<h4 style="text-align: center ;font-size: 200em; ">雪MM</h4>
+						<p style="text-indent:2em ;color: #E46D15 ;font-size:120em; font-weight: 600;"><b>斗鱼吃鸡一姐”妃凌雪“网友都称她雪哥，她的直播也是荤段子各种开车都会，还经常给粉丝送惊喜斗鱼TV女主播妃凌雪之前玩过很多网络游戏，虽然是新手，但超高颜值也让很多玩家愿意和她一起玩游戏，帮助她早一点脱离菜鸟的行列。</b></p>
+					</div>
+					</div>
+				    <div class="item pink" data-ref="mixitup-target" style="background-color: antiquewhite">
+						<div style="margin-top: -170px;position: absolute">
+						<img src="img/bg-img/张大仙.jpg" style="height: 60px;text-align:center;margin-left: 130px;margin-top: 10px;">
+						<h4 style="text-align: center ;font-size: 200em; ">张大仙</h4>
+						<p style="text-indent:2em ;color: #E46D15 ;font-size: 120em; font-weight: 600; "><b>张宏发，即“张大仙”，斗鱼平台人气主播，以直播MOBA类手机游戏《王者荣耀》出名，在直播中通过出色的表现及略带骚气傲娇的直播风格获得了非常高的口碑。 
+		原先在企鹅电竞直播平台主播，被网友称作“企鹅电竞第一骚仙”，后跳槽到斗鱼直播平台.  </b></p>
+					</div>
+					</div>
+					
+					<div class="item green" data-ref="mixitup-target" style="background-color: antiquewhite">
+						<div style="margin-top: -170px;position: absolute">
+						<img src="img/bg-img/小智1.jpg" style="width: 65px;text-align:center;margin-left: 120px;margin-top: 10px;">
+						<h4 style="text-align: center ;font-size: 200em; ">小智</h4>
+						<p style="text-indent:2em ;color: #E46D15 ;font-size: 120em; font-weight: 600; "><b>小智，本名杨丰智，辽宁葫芦岛人，人称葫芦岛吴奇隆。现英雄联盟娱乐型解说，前澄海3c知名解说，澄海3c新春杯、夏季杯、周年杯举办者。2011WCG澄海3c线上表演赛地图制作及比赛规则制定者，澄海3c第一语音公会ZAF公会会长。</b></p>
+						
+						</div>
+					</div>
+				    <div class="item blue" data-ref="mixitup-target" style="background-color: antiquewhite">
+					<div style="margin-top: -170px;position: absolute">
+						<img src="img/bg-img/韦神.jpeg" style="width: 60px;text-align:center;margin-left: 120px;margin-top: 10px;">
+						<h4 style="text-align: center ;font-size: 200em; ">韦神</h4>
+						<p style="text-indent:2em ;color: #E46D15 ;font-size: 120em; font-weight: 600; ">韦朕，1997年7月16日出生于湖南长沙，游戏ID：GodV，前中国《英雄联盟》电子竞技职业选手，前LGD战队中单，现《绝地求生》职业选手，4AM战队自由人<b></b></p>
+						
+					</div>	
+					</div>
+					<div class="item green" data-ref="mixitup-target" style="background-color: antiquewhite">
+						<div style="margin-top: -170px;position: absolute">
+						<img src="img/bg-img/若风.jpg" style="height:65px;text-align:center;margin-left: 120px;margin-top: 10px;">
+						<h4 style="text-align: center ;font-size: 200em; ">若风</h4>
+						<p style="text-indent:2em ;color: #E46D15 ;font-size: 120em; font-weight: 600; "><b>禹景曦，游戏ID：Misaya若风，1992年10月19日出生于湖南邵东县，前DOTA职业玩家，LOL职业选手，现任LOL游戏解说，游戏主播。毕业于湖南大众传媒学院。</b></p>
+						<p style="text-indent:2em ;color: #E46D15 ;font-size: 120em; font-weight: 600; "><b>作为曾经创下辉煌战绩的WE队长，若风集荣誉和名气于一身。</b></p>
+						</div></div>
+				   <div class="item blue" data-ref="mixitup-target" style="background-color: antiquewhite">
+					<div style="margin-top: -170px;position: absolute">
+						<img src="img/bg-img/呆呆.jpeg" style="width: 105px;text-align:center;margin-left: 70px;margin-top: 10px;">
+						<h4 style="text-align: center ;font-size: 200em; ">呆呆</h4>
+						<p style="text-indent:2em ;color: #E46D15 ;font-size: 120em; font-weight: 600; "><b></b></p>
+						<p style="text-indent:2em ;color: #E46D15 ;font-size: 120em; font-weight: 600; "><b>emmmmm,人美声甜，不过就是有点粗暴。</b></p>
+					</div>	
+					   
+					</div>
+					<div class="item pink" data-ref="mixitup-target" style="background-color: antiquewhite">
+					<div style="margin-top: -170px;position: absolute">
+						<img src="img/bg-img/韩跑跑.jpg" style="width: 90px;text-align:center;margin-left: 100px;margin-top: 10px;">
+						<h4 style="text-align: center ;font-size: 200em; ">韩跑跑</h4>
+						<p style="text-indent:2em ;color: #E46D15 ;font-size: 120em; font-weight: 600; ">韩跑跑以一手招牌韩信闻名，而除了犀利的操作和完美的团战意识之外，跑跑更为粉丝称道的是他对粉丝平易近人的态度和对游戏的良好心态，被企鹅电竞官方称为电竞正能量的韩跑跑从不在直播中与队员争吵，在逆风下更是从不放弃，多次逆风翻盘是他增粉的关键元素。而跑跑在韩信之外，又练出了两大绝活，关羽李白。<b></b></p>
+						
+					</div>	
+					</div>
+					<div class="item blue" data-ref="mixitup-target" style="background-color: antiquewhite">
+					<div style="margin-top: -170px;position: absolute">
+						<img src="img/bg-img/shou.jpg"style="width: 60px;text-align:center;margin-left: 120px;margin-top: 10px;">
+						<h4 style="text-align: center ;font-size: 200em; ">17_shou</h4>
+						<p style="text-indent:2em ;color: #E46D15 ;font-size: 120em; font-weight: 600; ">个人实力强到没边，有“人形外挂”之称，曾在一天之内用大号达成一千杀成就。缺点不会带动气氛，不会笼络观众的心。技术强，但是直播微略乏味。最近也一直在打职业赛，希望17战队可以拿到好成绩证明自己。<b></b></p>
+						
+					</div>	
+					</div>
+					<div class="item pink" data-ref="mixitup-target" style="background-color: antiquewhite">
+					<div style="margin-top: -170px;position: absolute">
+						<img src="img/bg-img/东辰-心态.jpg" style="width: 90px;text-align:center;margin-left: 100px;margin-top: 10px;">
+						<h4 style="text-align: center ;font-size: 200em; ">心态	</h4>
+						<p style="text-indent:2em ;color: #E46D15 ;font-size: 120em; font-weight: 600; ">东辰-心态，拥有200w订阅粉丝的虎牙明星主播。单次连胜数高达123场，人称国服第一韩信。小编对他印象很深刻的就是他拿韩信，和人5排时，先送了对面一百多个人头，最后居然还是获得了胜利。<b></b></p>
+						
+					</div>	
+					</div>
+					
+					
+				</div>
+		
+		<script src="js/mixitup.min.js"></script>
+		
+		<script>
+		    var containerEl = document.querySelector('[data-ref~="mixitup-container"]');
+		
+		    var mixer = mixitup(containerEl, {
+		        selectors: {
+		            target: '[data-ref~="mixitup-target"]'
+		        }
+		    });
+		</script>
+		
+		
+		
+		
+		
+			
+		<script>
+	$(function () {
+		$('#myTab li:eq(1) a').tab('show');
+	});
+	
+</script><link rel="stylesheet" type="text/css" href="css/aboutStyle.css"/>
+<footer id="footer">
+		  <div class="container">
+		    <div class="row">
+		      <div style="margin-left: -200px;">Copyright © 2019 All Rights Reserved.</div>
+		
+		    </div> 
+		  </div>
+		</footer>
+
+	<a class="glyphicon glyphicon-arrow-up"  id="goToTop"  style="background: #32383E;font-size: 25px;
+	color: #EDEDED;position: fixed;height: 30px; width: 30px ; right:30px;top: 500px; display: block;cursor:pointer;text-decoration:none">
+		
+	</a>	
+	
+		
+		
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#goToTop").hide() //隐藏go to top按钮
+			$(function() {
+				$(window).scroll(function() {
+					if ($(this).scrollTop() > 1) { //当window的scrolltop距离大于1时，go to top按钮淡出，反之淡入
+						$("#goToTop").fadeIn();
+					} else {
+						$("#goToTop").fadeOut();
+					}
+				});
+			});
+	
+	
+			// 给go to top按钮一个点击事件
+			$("#goToTop").click(function() {
+				$("html,body").animate({
+					scrollTop: 0
+				}, 600); //点击go to top按钮时，以800的速度回到顶部，这里的800可以根据你的需求修改
+				return false;
+			});
+		});
+	
+	
+		$(function() {
+			var banOffTop = $(".hx").offset().top; //获取到距离顶部的垂直距离
+			var scTop = 0; //初始化垂直滚动的距离
+			$(document).scroll(function() {
+				scTop = $(this).scrollTop(); //获取到滚动条拉动的距离
+				//console.log(scTop);查看滚动时，垂直方向上，滚动条滚动的距离
+				if (scTop >= banOffTop) {
+					//核心部分：当滚动条拉动的距离大于等于导航栏距离顶部的距离时，添加指定的样式
+					$(".hx").addClass("fixDiv");
+				} else {
+					$(".hx").removeClass("fixDiv");
+				}
+	
+			})
+		})
+	</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

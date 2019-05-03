@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+		<script type="text/javascript" charset="utf-8">
+			function fn() {
+
+				var a = function() {
+
+					console.log(b);
+				}
+
+				c = function() {
+					console.log(b);
+				}
+
+				var b = 2;
+			}
+			fn();
+			c();
+		</script>
+	</body>
+</html>
